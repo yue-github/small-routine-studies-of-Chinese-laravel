@@ -1,12 +1,10 @@
 <?php 
-/**
- * 公告类接口
- */
+ 
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Db;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -26,7 +24,7 @@ class UserController extends Controller{
         ->get();
         if($result->isEmpty()){
             $insertResult=DB::table("users")
-            ->insert(["openid"=>$openid,'nickName'=>$nickName,"city"=>$city,"province"=>$province,"created_at"=>date('Y-m-d H:i:s',time()),'points'=>0,'signDate'=>'2019-02-15 19:00:55','addPoint'=>8,'the_time'=>0]);
+            ->insert(["openid"=>$openid,'nickName'=>$nickName,"city"=>$city,"province"=>$province,"created_at"=>date('Y-m-d H:i:s',time()),'points'=>0,'signDate'=>'未开始','addPoint'=>8,'the_time'=>0,'promotion_fund'=>0]);
             if($insertResult){
                 return response()->json(["status"=>200,"msg"=>"用户信息储存成功"]);
             }else{
@@ -62,6 +60,53 @@ class UserController extends Controller{
         ->where(['openid'=>request('openid')])
         ->get(['points','addPoint','the_time','signDate']);
         return response()->json(['integral'=>$result,'w'=>request('openid')]);     
+    }
+    public function getInCount(){
+        $result=json_decode(DB::table('users')
+        ->where(['openid'=>request('openid')])
+        ->get(['points']),true);
+        return response()->json(['inCount'=>$result[0]['points']]);
+    }
+    public function getTuiGuangMa(){
+        $result=DB::table('users')
+        ->where(['openid'=>request('openid')])
+        ->get(['tuiguangma_src']);
+        return $result;
+    }
+    public function getFound(){
+        $result=DB::table('users')
+        ->where(['openid'=>request('openid')])
+        ->get(['promotion_fund']);
+        return $result;
+    }
+    public function goContact(Request $request){
+          $result=DB::table('contact')->where(['openid'=>request('openid')])
+          ->get();
+          if($result->isEmpty()){
+            $res=DB::table('contact')->insert($request->all());
+            if($res){
+                return response()->json(['status'=>200,'msg'=>'联系方式已建立']);
+            }
+          }else{
+            $res=DB::table('contact')->where(['openid'=>request('openid')])->update($request->all());
+            if($res){
+                return response()->json(['status'=>200,'msg'=>'联系方式已建立']);
+            }
+          }
+    }
+    public function getContact(){
+        $result=DB::table('contact')->where(['openid'=>request('openid')])->get();
+        return $result;
+    }
+    public function proveContact(){
+        $result=DB::table('contact')
+        ->where(['openid'=>request('openid')])
+        ->get();
+        if($result->isEmpty()){
+            return response()->json(['status'=>201,'msg'=>'此openid无相关联系方式记录']);
+        }else{
+            return response()->json(['status'=>200,'msg'=>'此openid有相关联系方式记录']);
+        }
     }
          
 
