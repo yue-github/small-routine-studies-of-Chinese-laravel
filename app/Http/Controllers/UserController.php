@@ -23,8 +23,9 @@ class UserController extends Controller{
         $result=DB::table("users")->where(["openid"=>$openid])
         ->get();
         if($result->isEmpty()){
+            $point=json_decode(DB::table('integral_rule')->where(['role'=>'just'])->get(['addPoint']),true)[0]['addPoint'];
             $insertResult=DB::table("users")
-            ->insert(["openid"=>$openid,'nickName'=>$nickName,"city"=>$city,"province"=>$province,"created_at"=>date('Y-m-d H:i:s',time()),'points'=>0,'signDate'=>'未开始','addPoint'=>8,'the_time'=>0,'promotion_fund'=>0]);
+            ->insert(["openid"=>$openid,'nickName'=>$nickName,"city"=>$city,"province"=>$province,"created_at"=>date('Y-m-d H:i:s',time()),'points'=>0,'signDate'=>'未开始','addPoint'=>$point,'the_time'=>0,'promotion_fund'=>0,'role'=>'just']);
             if($insertResult){
                 return response()->json(["status"=>200,"msg"=>"用户信息储存成功"]);
             }else{

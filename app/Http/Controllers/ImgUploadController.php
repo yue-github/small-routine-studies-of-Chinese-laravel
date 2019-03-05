@@ -18,7 +18,7 @@ class ImgUploadController extends Controller
          date_default_timezone_set('PRC');
    }
    public function upload(Request $request){
-    $file = $request->file('file');
+    
     $result=DB::table('contact')
     ->where(['openid'=>request('openid')])
     ->get();
@@ -26,11 +26,18 @@ class ImgUploadController extends Controller
     if($boo){
         $erweimaSrc=json_decode($result,true)[0]['erweimaSrc'];
         $path_er='.'.(substr($erweimaSrc,request('length')));
-        unlink($path_er);
+        if(file_exists($path_er)!=''){
+                unlink($path_er);
+         } 
+        
     }
+    
+         
+            
+       
 
         // 文件是否上传成功
-         
+         $file = $request->file('file');
         if ($file->isValid()) {
 
             // 获取文件相关信息

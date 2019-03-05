@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 01/03/2019 13:18:37
+ Date: 05/03/2019 14:12:21
 */
 
 SET NAMES utf8mb4;
@@ -22,27 +22,28 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `banner`;
 CREATE TABLE `banner`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `url` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `introduce` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of banner
 -- ----------------------------
-INSERT INTO `banner` VALUES (1, 'https://miao.su/images/2019/02/19/new1649aa.md.png');
-INSERT INTO `banner` VALUES (2, 'https://miao.su/images/2019/02/19/new2fb293.md.png');
-INSERT INTO `banner` VALUES (3, 'https://miao.su/images/2019/02/20/banner837dac.md.jpg');
-INSERT INTO `banner` VALUES (4, 'https://miao.su/images/2019/02/19/new58e01e.md.jpg');
-INSERT INTO `banner` VALUES (5, 'https://miao.su/images/2019/02/19/new3b9ff5.md.jpg');
-INSERT INTO `banner` VALUES (6, 'https://miao.su/images/2019/02/19/new49c577.md.jpg');
+INSERT INTO `banner` VALUES (1, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-03-5c7cf48f4275d.png', '第一张轮播图', '世界，晚安');
+INSERT INTO `banner` VALUES (2, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-12-5c7cf498aee4f.png', '第二张轮播图', '世界，你好');
+INSERT INTO `banner` VALUES (3, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-27-5c7cf4a712fae.jpg', '第三张轮播图', NULL);
+INSERT INTO `banner` VALUES (4, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-16-5c7cf49cd36f0.jpg', '第四张轮播图', NULL);
+INSERT INTO `banner` VALUES (5, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-40-5c7cf4b491904.jpg', '第五张轮播图', NULL);
+INSERT INTO `banner` VALUES (6, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-46-5c7cf4ba8e089.jpg', '第六张轮播图', NULL);
 
 -- ----------------------------
 -- Table structure for class
 -- ----------------------------
 DROP TABLE IF EXISTS `class`;
 CREATE TABLE `class`  (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `boo` bit(1) NULL DEFAULT NULL,
   `line_is` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `url` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
@@ -64,14 +65,21 @@ CREATE TABLE `class`  (
   `tui_found` int(11) NULL DEFAULT NULL,
   `eye` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 94 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of class
 -- ----------------------------
-INSERT INTO `class` VALUES (1, b'1', '线下课程', 'https://miao.su/images/2019/02/18/guoxue8a7df.md.jpg', '董老师课程', 1002, '688.33', '风水国学', '信息', '热销中...', '0.56', 8, 88, b'0', 997, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'0', b'0', NULL, 0, '未知');
-INSERT INTO `class` VALUES (2, b'1', '推荐课程', 'https://miao.su/images/2019/02/18/xu2535b.md.jpg', '蒲老师课程', 1235, '888.68', '风水国学', '信息', '热销中...', '0.23', 5, 55, b'0', 961, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'https://www.gdmzd.com/audio/love.mp3', 6, '34');
-INSERT INTO `class` VALUES (3, b'1', '精品课程', 'https://miao.su/images/2019/02/18/pucaee7.jpg', '魏老师课程', 13, '36608.00', '风水国学', '信息', '热销中...', '0.53', 6, 66, b'0', 987, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'https://www.gdmzd.com/audio/tian.mp3', 8, '17');
+INSERT INTO `class` VALUES (90, b'1', '推荐课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-47-59-5c7cf44f33c8f.jpg', '李老师', 0, '888.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-25-40-5c7cfd243e76b.mp3', 8, '0');
+INSERT INTO `class` VALUES (91, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-10-28-47-5c7cfddfdedd1.jpg', '郑老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-29-03-5c7cfdef326ec.mp3', 8, '0');
+INSERT INTO `class` VALUES (92, b'1', '线下课程', 'http://localhost/geomancy/public/uploads/2019-03-04-10-30-20-5c7cfe3cefbde.jpg', '霍老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'0', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-30-45-5c7cfe55d0eaf.mp3', 8, '0');
+INSERT INTO `class` VALUES (93, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-10-31-33-5c7cfe853f5a4.jpg', '孙老师', 0, '888.88', '命运与财富', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-31-42-5c7cfe8eb0072.mp3', 8, '0');
+INSERT INTO `class` VALUES (89, b'1', '线下课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-46-53-5c7cf40de8d44.jpg', '卢老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'0', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-25-24-5c7cfd147f239.mp3', 8, '0');
+INSERT INTO `class` VALUES (87, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-44-48-5c7cf3902da8d.jpg', '严老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-39-5c7cfce7b9e62.mp3', 8, '0');
+INSERT INTO `class` VALUES (88, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-45-28-5c7cf3b84bfaf.jpg', '吴老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-57-5c7cfcf9e5647.mp3', 8, '0');
+INSERT INTO `class` VALUES (73, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-34-27-5c7cf123756d7.jpg', '李老师', 0, '868.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 999, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-23-48-5c7cfcb488580.mp3', 8, '1');
+INSERT INTO `class` VALUES (86, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-38-00-5c7cf1f83e9bf.jpg', '魏老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-22-5c7cfcd6547e1.mp3', 8, '0');
+INSERT INTO `class` VALUES (75, b'1', '推荐课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-35-17-5c7cf1554ff1b.jpg', '蒲老师', 0, '886.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-04-5c7cfcc4d393a.mp3', 8, '0');
 
 -- ----------------------------
 -- Table structure for class_pay
@@ -102,19 +110,12 @@ CREATE TABLE `class_pay`  (
   `eye` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `class_id` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 120 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 121 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of class_pay
 -- ----------------------------
-INSERT INTO `class_pay` VALUES (119, b'1', '精品课程', 'https://miao.su/images/2019/02/18/pucaee7.jpg', '魏老师课程', 13, '36608.00', '风水国学', '信息', '热销中...', '0.53', 6, 66, b'0', 988, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/tian.mp3', 8, '16', 3);
-INSERT INTO `class_pay` VALUES (118, b'1', '精品课程', 'https://miao.su/images/2019/02/18/pucaee7.jpg', '魏老师课程', 13, '36608.00', '风水国学', '信息', '热销中...', '0.53', 6, 4, b'0', 989, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/tian.mp3', 8, '17', 3);
-INSERT INTO `class_pay` VALUES (117, b'1', '推荐课程', 'https://miao.su/images/2019/02/18/xu2535b.md.jpg', '蒲老师课程', 1235, '888.68', '风水国学', '信息', '热销中...', '0.23', 5, 55, b'0', 962, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/love.mp3', 6, '33', 2);
-INSERT INTO `class_pay` VALUES (116, b'1', '推荐课程', 'https://miao.su/images/2019/02/18/xu2535b.md.jpg', '蒲老师课程', 1235, '888.68', '风水国学', '信息', '热销中...', '0.23', 5, 4, b'0', 963, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/love.mp3', 6, '34', 2);
-INSERT INTO `class_pay` VALUES (115, b'1', '推荐课程', 'https://miao.su/images/2019/02/18/xu2535b.md.jpg', '蒲老师课程', 1235, '888.68', '风水国学', '信息', '热销中...', '0.23', 5, 8, b'0', 964, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/love.mp3', 6, '34', 2);
-INSERT INTO `class_pay` VALUES (114, b'1', '精品课程', 'https://miao.su/images/2019/02/18/pucaee7.jpg', '魏老师课程', 13, '36608.00', '风水国学', '信息', '热销中...', '0.53', 6, 0, b'0', 990, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/tian.mp3', 8, '17', 3);
-INSERT INTO `class_pay` VALUES (113, b'1', '精品课程', 'https://miao.su/images/2019/02/18/pucaee7.jpg', '魏老师课程', 13, '36608.00', '风水国学', '信息', '热销中...', '0.53', 6, 66, b'0', 991, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/tian.mp3', 8, '17', 3);
-INSERT INTO `class_pay` VALUES (112, b'1', '推荐课程', 'https://miao.su/images/2019/02/18/xu2535b.md.jpg', '蒲老师课程', 1235, '888.68', '风水国学', '信息', '热销中...', '0.23', 5, 55, b'0', 965, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'https://www.gdmzd.com/audio/love.mp3', 6, '34', 2);
+INSERT INTO `class_pay` VALUES (120, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-34-27-5c7cf123756d7.jpg', '李老师', 0, '868.88', '风水国学', '信息', '热销中', '0.25', 8, 4, b'0', 1000, '你好，世界', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-04-10-23-48-5c7cfcb488580.mp3', 8, '1', 73);
 
 -- ----------------------------
 -- Table structure for contact
@@ -134,7 +135,24 @@ CREATE TABLE `contact`  (
 -- ----------------------------
 -- Records of contact
 -- ----------------------------
-INSERT INTO `contact` VALUES (18, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-02-28-10-03-05-5c77b1d98991f.jpg', '123243243242342');
+INSERT INTO `contact` VALUES (18, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '123243243242342');
+
+-- ----------------------------
+-- Table structure for integral_rule
+-- ----------------------------
+DROP TABLE IF EXISTS `integral_rule`;
+CREATE TABLE `integral_rule`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `addPoint` int(11) NULL DEFAULT NULL,
+  `role` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of integral_rule
+-- ----------------------------
+INSERT INTO `integral_rule` VALUES (1, 8, 'just');
+INSERT INTO `integral_rule` VALUES (2, 18, 'vip');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -167,22 +185,12 @@ CREATE TABLE `msg`  (
   `message` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `create_time` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 70 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 71 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of msg
 -- ----------------------------
-INSERT INTO `msg` VALUES (69, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 18:05:23');
-INSERT INTO `msg` VALUES (68, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你兑换了推广金10点,你将获得人民币3.75元,请耐心等待', '2019-02-28 18:04:56');
-INSERT INTO `msg` VALUES (67, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你兑换了推广金10点,你将获得人民币3.75元,请耐心等待', '2019-02-28 18:00:11');
-INSERT INTO `msg` VALUES (66, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:59:32');
-INSERT INTO `msg` VALUES (65, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:58:08');
-INSERT INTO `msg` VALUES (64, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:56:16');
-INSERT INTO `msg` VALUES (63, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你兑换了推广金10点,你将获得人民币3.75元,请耐心等待', '2019-02-28 17:50:08');
-INSERT INTO `msg` VALUES (62, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:43:35');
-INSERT INTO `msg` VALUES (61, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:10:20');
-INSERT INTO `msg` VALUES (60, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:08:41');
-INSERT INTO `msg` VALUES (59, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-02-28 17:07:28');
+INSERT INTO `msg` VALUES (70, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-04 18:26:26');
 
 -- ----------------------------
 -- Table structure for oauth_access_tokens
@@ -339,6 +347,48 @@ INSERT INTO `oauth_access_tokens` VALUES ('af286331c0801dcb4890d2594076cb161e822
 INSERT INTO `oauth_access_tokens` VALUES ('df4f73e19c4affdd0eaef17ffabf3fa147fec821846cb376fae4e4806044b1896d5c1c051f2a1cce', 30, 1, 'MyApp', '[]', 0, '2019-03-01 03:57:26', '2019-03-01 03:57:26', '2020-03-01 03:57:26');
 INSERT INTO `oauth_access_tokens` VALUES ('14d480e0f82d8ab9f97adcb610ee90f6d992a2b78e877f9bf711354e74a053ebc3009ac089dd5797', 30, 1, 'MyApp', '[]', 0, '2019-03-01 03:58:13', '2019-03-01 03:58:13', '2020-03-01 03:58:13');
 INSERT INTO `oauth_access_tokens` VALUES ('f7332d64f8ad34e3aa61473c0ab34f334ff6a868f94014468cd466b6b6bf5d05054b2ae12b6d38d2', 30, 1, 'MyApp', '[]', 0, '2019-03-01 04:14:05', '2019-03-01 04:14:05', '2020-03-01 04:14:05');
+INSERT INTO `oauth_access_tokens` VALUES ('beeff7dd3ad57d0eac46c4b6c1b1e2090cc42e0c87ff9c43e727546df0a9495bbc80a66d8eb4dd05', 30, 1, 'MyApp', '[]', 0, '2019-03-01 05:23:28', '2019-03-01 05:23:28', '2020-03-01 05:23:28');
+INSERT INTO `oauth_access_tokens` VALUES ('e1f4c829255c2f9a71171169bdc88d15b2a95757f2c1d2bd90cdfbc29b039161c9e92b0547c3e886', 30, 1, 'MyApp', '[]', 0, '2019-03-01 05:23:44', '2019-03-01 05:23:44', '2020-03-01 05:23:44');
+INSERT INTO `oauth_access_tokens` VALUES ('81ba59be5d5d6e94f9541562da148b8a5e07f3ce9c0b32ebd3bd0304974df612a4e57d4d30b4103d', 30, 1, 'MyApp', '[]', 0, '2019-03-01 07:19:26', '2019-03-01 07:19:26', '2020-03-01 07:19:26');
+INSERT INTO `oauth_access_tokens` VALUES ('65c75a1e58134bb7753a8be69abde01dc9fd1853250f67c6fcf14d4acde4d90d56c3fd07550a900e', 30, 1, 'MyApp', '[]', 0, '2019-03-01 14:24:31', '2019-03-01 14:24:31', '2020-03-01 14:24:31');
+INSERT INTO `oauth_access_tokens` VALUES ('3bde1f981106675f24debdc40c269db7f385d8b4d7f2c840dbce859115756ab41416200fd043b628', 30, 1, 'MyApp', '[]', 0, '2019-03-01 14:24:38', '2019-03-01 14:24:38', '2020-03-01 14:24:38');
+INSERT INTO `oauth_access_tokens` VALUES ('1e4770822f526597531dcaea0f5afc5aafe9f3e835ddc6b400b778367048fb37ff0d74811e9cbb9a', 30, 1, 'MyApp', '[]', 0, '2019-03-02 00:37:40', '2019-03-02 00:37:40', '2020-03-02 00:37:40');
+INSERT INTO `oauth_access_tokens` VALUES ('ec3864be7f035bf24ba8d45641d64cc071259410fa48707b2f336ca5c6a52fbcd0817073639b96d7', 30, 1, 'MyApp', '[]', 0, '2019-03-02 00:37:51', '2019-03-02 00:37:51', '2020-03-02 00:37:51');
+INSERT INTO `oauth_access_tokens` VALUES ('1a4999fa632256a55f685418b23b8d375bf6b4be8b12f6622b3327eb64ac89f109d44050ecd0831d', 30, 1, 'MyApp', '[]', 0, '2019-03-02 00:38:11', '2019-03-02 00:38:11', '2020-03-02 00:38:11');
+INSERT INTO `oauth_access_tokens` VALUES ('d68b8d22e37651f017172f1969e38cdf5d22f582a22464859d85150001a45435b3898c059501404d', 30, 1, 'MyApp', '[]', 0, '2019-03-02 00:38:23', '2019-03-02 00:38:23', '2020-03-02 00:38:23');
+INSERT INTO `oauth_access_tokens` VALUES ('a1ac353e2cbb5cc2f48805a5fbf208b994bc0011519a7bd4b065484af59621c19dad2e185641fc0d', 30, 1, 'MyApp', '[]', 0, '2019-03-02 00:38:28', '2019-03-02 00:38:28', '2020-03-02 00:38:28');
+INSERT INTO `oauth_access_tokens` VALUES ('32cfaa22477a471e193f72427ef78b35505d1af344b239a73bfe0f041934d0db51f33205e37026e0', 30, 1, 'MyApp', '[]', 0, '2019-03-02 04:39:38', '2019-03-02 04:39:38', '2020-03-02 04:39:38');
+INSERT INTO `oauth_access_tokens` VALUES ('832e2d22cf3ae0e174de77fe56b2b413887d0ba188f896377eb0f8398c3b49ff546345d473650205', 30, 1, 'MyApp', '[]', 0, '2019-03-02 04:39:47', '2019-03-02 04:39:47', '2020-03-02 04:39:47');
+INSERT INTO `oauth_access_tokens` VALUES ('7413e4576c7a5a96983e03cc6e5ecc4931daf24bc333204a6c0ed794b620a6bf5f7ed0714f364ee3', 30, 1, 'MyApp', '[]', 0, '2019-03-02 04:39:59', '2019-03-02 04:39:59', '2020-03-02 04:39:59');
+INSERT INTO `oauth_access_tokens` VALUES ('be2c8d757c20ef332781e92d060fb0f9e211ea04fc3ed9430950cd3f9334f1fe299931a657fbb6f9', 30, 1, 'MyApp', '[]', 0, '2019-03-02 04:40:25', '2019-03-02 04:40:25', '2020-03-02 04:40:25');
+INSERT INTO `oauth_access_tokens` VALUES ('1f2ef2a42176f7af7310c87441dac85a659bd87bdcda409cfb77acad163081f20aa4e49d86a589c8', 30, 1, 'MyApp', '[]', 0, '2019-03-02 04:57:45', '2019-03-02 04:57:45', '2020-03-02 04:57:45');
+INSERT INTO `oauth_access_tokens` VALUES ('1cf391f77250bc2c789a47f8093678e6c56bcd3aa66b12c22261b8152a2c3480795c820f8535f5e4', 30, 1, 'MyApp', '[]', 0, '2019-03-02 04:57:54', '2019-03-02 04:57:54', '2020-03-02 04:57:54');
+INSERT INTO `oauth_access_tokens` VALUES ('b00fb119ee734c59149395c3df7aefcac9b4bd802b7dfa153f46efcec54011cf8028122b013c9a83', 30, 1, 'MyApp', '[]', 0, '2019-03-02 07:40:59', '2019-03-02 07:40:59', '2020-03-02 07:40:59');
+INSERT INTO `oauth_access_tokens` VALUES ('c7fcc83b412cc140ba1f28b4bf8be58283523bd59d001614ee94098c1375781192f110c2b207c02f', 30, 1, 'MyApp', '[]', 0, '2019-03-02 07:41:09', '2019-03-02 07:41:09', '2020-03-02 07:41:09');
+INSERT INTO `oauth_access_tokens` VALUES ('8d04d3a1d4a7986b83d184c802a0ea6fa3a3a0b375a01309fff131c0785320401ee58227306942ec', 30, 1, 'MyApp', '[]', 0, '2019-03-02 07:41:46', '2019-03-02 07:41:46', '2020-03-02 07:41:46');
+INSERT INTO `oauth_access_tokens` VALUES ('92631067dc88c081f9690737708d64f6db667eb89a053a70f3944f0b2b4fb8ab5feb548c5da9ebd6', 30, 1, 'MyApp', '[]', 0, '2019-03-02 07:41:58', '2019-03-02 07:41:58', '2020-03-02 07:41:58');
+INSERT INTO `oauth_access_tokens` VALUES ('2a83a423b2fc04451419ae6e68ff503b5151498ddee5e7ebb39dceac67ca24b3e9ce010231877d55', 30, 1, 'MyApp', '[]', 0, '2019-03-02 07:42:01', '2019-03-02 07:42:01', '2020-03-02 07:42:01');
+INSERT INTO `oauth_access_tokens` VALUES ('b9175f4302cc6baff90d9d4892be9cde371cbc1000d8de488732114a96e1864dbc76588d7d267be5', 30, 1, 'MyApp', '[]', 0, '2019-03-02 07:42:44', '2019-03-02 07:42:44', '2020-03-02 07:42:44');
+INSERT INTO `oauth_access_tokens` VALUES ('ad3dd0855fd218a2c201fc02a5fdadd5853a3334deb61c11e38129b17279e239176a0fe3334ef71a', 30, 1, 'MyApp', '[]', 0, '2019-03-02 13:06:51', '2019-03-02 13:06:51', '2020-03-02 13:06:51');
+INSERT INTO `oauth_access_tokens` VALUES ('a75ace418f0cfb90b1377a45e0f27b70a0189204e18d70b8d018df11901dbc1859b8b35746c5d955', 30, 1, 'MyApp', '[]', 0, '2019-03-02 13:07:48', '2019-03-02 13:07:48', '2020-03-02 13:07:48');
+INSERT INTO `oauth_access_tokens` VALUES ('bb7431a1ea2e001d3d9927e558efc3c6fdda34ec5c1c5c7879e55734fb1e48e54144a7be3301867a', 30, 1, 'MyApp', '[]', 0, '2019-03-02 13:07:55', '2019-03-02 13:07:55', '2020-03-02 13:07:55');
+INSERT INTO `oauth_access_tokens` VALUES ('d049a200d74d20a2b42bd2456f9806ea91c16f723160c7fd86cc6f84e43164978cbe3efda2982220', 30, 1, 'MyApp', '[]', 0, '2019-03-03 08:11:49', '2019-03-03 08:11:49', '2020-03-03 08:11:49');
+INSERT INTO `oauth_access_tokens` VALUES ('f7f3ebfd520f3fe68a0f6536a9277189ba8e90a0dbbce3f883ba56d60ae522d7d0150fb1693781cf', 30, 1, 'MyApp', '[]', 0, '2019-03-03 08:12:07', '2019-03-03 08:12:07', '2020-03-03 08:12:07');
+INSERT INTO `oauth_access_tokens` VALUES ('2edd5083fa09eb4cfa07d8624c9271802f3aa7cd811f87048e48a7fdea2a60d7aa4276aeb6519b22', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:43:07', '2019-03-03 09:43:07', '2020-03-03 09:43:07');
+INSERT INTO `oauth_access_tokens` VALUES ('2d00a2ec30ac5c9251d27bf0b47c93beea217eb6b585c66b2a3424759e5397833811085d1bb3d748', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:43:19', '2019-03-03 09:43:19', '2020-03-03 09:43:19');
+INSERT INTO `oauth_access_tokens` VALUES ('c22afa5ebdf707b29ab8d822598534c83b8d0cdbc902139a9c51d1995717de36b0511795e4d83354', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:43:41', '2019-03-03 09:43:41', '2020-03-03 09:43:41');
+INSERT INTO `oauth_access_tokens` VALUES ('917a911c48f62052d81d043412a6d761b35a5f4ef6a2ae7b06ac2b5864605f67d6a6dd5ae48614ca', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:43:51', '2019-03-03 09:43:51', '2020-03-03 09:43:51');
+INSERT INTO `oauth_access_tokens` VALUES ('d85eccea79f401eaaa59cabf0335e8e57d239791f33faeec98cb552b18b06e599a6c2ec227827994', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:43:56', '2019-03-03 09:43:56', '2020-03-03 09:43:56');
+INSERT INTO `oauth_access_tokens` VALUES ('9318033a2aa7e9f0dd81c68c3e7f09522c2e23d5d501903afa0d846bbb133b3421af371b85255075', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:43:58', '2019-03-03 09:43:58', '2020-03-03 09:43:58');
+INSERT INTO `oauth_access_tokens` VALUES ('78f84bdc277ba2a9ddac1ec6295f9f0abba8084076e2f47d06dfeecd2a4814be510d5898bd6d23f0', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:44:09', '2019-03-03 09:44:09', '2020-03-03 09:44:09');
+INSERT INTO `oauth_access_tokens` VALUES ('af5fd51311be4a23ca8f4fa2ce26182b76c6939264540b5bf50a77a9c882f572b29923943be2db72', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:44:36', '2019-03-03 09:44:36', '2020-03-03 09:44:36');
+INSERT INTO `oauth_access_tokens` VALUES ('79b6bec15cc064409fdbae826ef6a7ce9b8446d6b1d5bdc7fdbdcdd54eec7b3c1c8f9cf5927f14d2', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:44:44', '2019-03-03 09:44:44', '2020-03-03 09:44:44');
+INSERT INTO `oauth_access_tokens` VALUES ('9ba5695598ca2cca823db04d773a5ecd9b3a83e14cc8c3cde289eacec967a6ab2beb09faaf2ed1d0', 30, 1, 'MyApp', '[]', 0, '2019-03-03 09:46:54', '2019-03-03 09:46:54', '2020-03-03 09:46:54');
+INSERT INTO `oauth_access_tokens` VALUES ('240ffbfed49763cab5f4ec4322e60aa41d6b78cd87c38c57d5d671ce58b0963283f401ede2007161', 30, 1, 'MyApp', '[]', 0, '2019-03-03 14:56:06', '2019-03-03 14:56:06', '2020-03-03 14:56:06');
+INSERT INTO `oauth_access_tokens` VALUES ('93d30fd715ff52627f44587f7641c044c209c9397e3c8be13218e9f11129415e5d620ad6a71c09c0', 30, 1, 'MyApp', '[]', 0, '2019-03-04 00:19:22', '2019-03-04 00:19:22', '2020-03-04 00:19:22');
+INSERT INTO `oauth_access_tokens` VALUES ('6e385a29c5b6a46b96f328e0b63e142b1262eabe50586352575983f27e97fe012c3d1a440c98d45f', 30, 1, 'MyApp', '[]', 0, '2019-03-05 00:20:39', '2019-03-05 00:20:39', '2020-03-05 00:20:39');
+INSERT INTO `oauth_access_tokens` VALUES ('e8406b0553cd8fbfdd7d5f0422e8245bc41730bcdcb4cb64d6ad9dd00eae14b2868ac88eb169714f', 30, 1, 'MyApp', '[]', 0, '2019-03-05 05:13:46', '2019-03-05 05:13:46', '2020-03-05 05:13:46');
+INSERT INTO `oauth_access_tokens` VALUES ('dcadd2fb53e9ce64a9eff66aef4c8a96ab8d4b5b5b430639cd2ae31664f37e9c44ae042db597f4e9', 30, 1, 'MyApp', '[]', 0, '2019-03-05 05:13:51', '2019-03-05 05:13:51', '2020-03-05 05:13:51');
 
 -- ----------------------------
 -- Table structure for oauth_auth_codes
@@ -461,9 +511,9 @@ CREATE TABLE `tui_money_fund`  (
 -- ----------------------------
 -- Records of tui_money_fund
 -- ----------------------------
-INSERT INTO `tui_money_fund` VALUES (5, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-02-28-09-11-29-5c77a5c1c46a8.jpg', '2019-02-28 17:50:08', 10, b'0', '3.75', 8, 3, b'0');
-INSERT INTO `tui_money_fund` VALUES (6, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-02-28-09-11-29-5c77a5c1c46a8.jpg', '2019-02-28 18:00:11', 10, b'0', '3.75', 8, 3, b'0');
-INSERT INTO `tui_money_fund` VALUES (7, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-02-28-10-03-05-5c77b1d98991f.jpg', '2019-02-28 18:04:56', 10, b'0', '3.75', 8, 3, b'0');
+INSERT INTO `tui_money_fund` VALUES (5, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '2019-02-28 17:50:08', 10, b'0', '3.75', 8, 3, b'1');
+INSERT INTO `tui_money_fund` VALUES (6, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '卢老师', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '2019-02-28 18:00:11', 10, b'0', '3.75', 8, 3, b'1');
+INSERT INTO `tui_money_fund` VALUES (7, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蒲老师', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '2019-02-28 18:04:56', 10, b'0', '3.75', 8, 3, b'0');
 
 -- ----------------------------
 -- Table structure for tui_rule
@@ -480,7 +530,7 @@ CREATE TABLE `tui_rule`  (
 -- ----------------------------
 -- Records of tui_rule
 -- ----------------------------
-INSERT INTO `tui_rule` VALUES (1, 8, '3', 'tui');
+INSERT INTO `tui_rule` VALUES (1, 6, '3', 'tui');
 
 -- ----------------------------
 -- Table structure for tuiguang_msg
@@ -495,17 +545,12 @@ CREATE TABLE `tuiguang_msg`  (
   `get_found` int(11) NULL DEFAULT NULL,
   `create_time` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 25 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 26 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tuiguang_msg
 -- ----------------------------
-INSERT INTO `tuiguang_msg` VALUES (20, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 6, '2019-02-28 17:43:35');
-INSERT INTO `tuiguang_msg` VALUES (19, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 8, '2019-02-28 17:10:20');
-INSERT INTO `tuiguang_msg` VALUES (21, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 6, '2019-02-28 17:56:16');
-INSERT INTO `tuiguang_msg` VALUES (22, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 6, '2019-02-28 17:58:08');
-INSERT INTO `tuiguang_msg` VALUES (23, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 8, '2019-02-28 17:59:32');
-INSERT INTO `tuiguang_msg` VALUES (24, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 8, '2019-02-28 18:05:23');
+INSERT INTO `tuiguang_msg` VALUES (25, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 8, '2019-03-04 18:26:26');
 
 -- ----------------------------
 -- Table structure for users
@@ -532,13 +577,29 @@ CREATE TABLE `users`  (
   `promotion_fund` int(11) NULL DEFAULT NULL,
   `found_mark_this` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `found_mark_that` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `role` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (26, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-02-28 17:04:50', NULL, '蓝之静云', 'Sanming', 'Fujian', 4, '2019-02-28 17:13:41', 8, 1, NULL, 12, '123', '123');
-INSERT INTO `users` VALUES (30, NULL, NULL, 'gdmzd', NULL, '$2y$10$69Lirb9VgHvKZeG0snCcnuED3mehrodWn8Jux0N2XrdD7.CGhE8RC', NULL, '2019-02-28 15:04:28', '2019-02-28 15:04:28', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` VALUES (26, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-02-28 17:04:50', NULL, '蓝之静云', 'Sanming', 'Fujian', 12, '2019-03-05 11:12:26', 8, 2, NULL, 20, '123', '123', 'just');
+INSERT INTO `users` VALUES (30, NULL, NULL, 'gdmzd', NULL, '$2y$10$69Lirb9VgHvKZeG0snCcnuED3mehrodWn8Jux0N2XrdD7.CGhE8RC', NULL, '2019-02-28 15:04:28', '2019-02-28 15:04:28', NULL, NULL, NULL, NULL, NULL, 8, NULL, NULL, NULL, NULL, NULL, 'just');
+
+-- ----------------------------
+-- Table structure for web_visit
+-- ----------------------------
+DROP TABLE IF EXISTS `web_visit`;
+CREATE TABLE `web_visit`  (
+  `id` int(11) NOT NULL,
+  `count` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of web_visit
+-- ----------------------------
+INSERT INTO `web_visit` VALUES (1, '0');
 
 SET FOREIGN_KEY_CHECKS = 1;

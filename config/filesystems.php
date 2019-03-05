@@ -60,6 +60,11 @@ return [
             //文件将上传到public/uploads目录 如果需要浏览器直接访问 请设置成这个
             'root' => public_path('uploads'),
         ],
+        'audio' => [
+            'driver' => 'local',
+            //文件将上传到public/uploads目录 如果需要浏览器直接访问 请设置成这个
+            'root' => public_path('audio'),
+        ],
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),

@@ -13,7 +13,9 @@ class ClassController extends Controller{
          date_default_timezone_set('PRC');
     }
     public function getClass(){
-        $result=DB::table('class')->get();
+        $result=DB::table('class')
+        ->orderBy('id','asc')
+        ->get();
         return $result;
     }
     public function getClassPay(){
@@ -37,6 +39,14 @@ class ClassController extends Controller{
             return response()->json(['status'=>200,'msg'=>'更新成功']);
         }
     }
+    public function getClassLimit(){
+        return DB::table('class')
+        ->where(['class_try_read'=>1])
+        ->orderBy('id', 'asc')
+        ->limit(8)
+        ->get();
+    }
+   
          
 
 

@@ -26,6 +26,18 @@ class MsgController extends Controller{
         ->get();
     	return $result;
     }
+    public function getTuiMoneyConvert(){
+        return DB::table('tui_money_fund')->orderBy('is_success','asc')->get();
+    }
+    public function mark(){
+        $update=DB::table('tui_money_fund')->where(['id'=>request('id')])->update(['is_success'=>1]);
+        if($update){
+            $data=DB::table('tui_money_fund')->orderBy('is_success','asc')->get();
+            return response()->json(['status'=>200,'data'=>$data]);
+        }else{
+            return repsonse()->json(['status'=>503,'msg'=>'标记已处理失败']);
+        }
+    }
          
 
 

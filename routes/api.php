@@ -54,6 +54,9 @@ Route::post('class/getClass','ClassController@getClass');
 Route::post('class/getClassPay','ClassController@getClassPay');
 // 增加观看记录
 Route::post('class/addEye','ClassController@addEye');
+// 获取限制的课程
+Route::post('class/getClassLimit','ClassController@getClassLimit');
+
 // 信息模块
 Route::post('msg/getMsg','MsgController@getMsg');
 Route::post('msg/getTuiMsg','MsgController@getTuiMsg');
@@ -84,7 +87,34 @@ Route::get('user/info','AdminUserController@info');
 Route::post('user/logout','AdminUserController@logout');
 // 轮播图信息获取
 Route::post('banner/list','AdminBannerController@getList');
+// 将修改的轮播图图片储存起来
+Route::post('banner/imgUpload','AdminBannerController@saveImg');
+// 修改轮播图信息
+Route::post('banner/setList','AdminBannerController@setList');
 
+// 课程图片接口请求
+Route::post('class/imgUpload','AdminClassController@imgUpload');
+// 音频请求接口
+Route::post('class/audio','AdminClassController@audioUploads');
+// 课程相关信息修改
+Route::post('class/edit','AdminClassController@edit');
+// 课程添加
+Route::post('class/addClass','AdminClassController@addClass');
+// 课程删除
+Route::post('class/delete','AdminClassController@delete');
+
+// 规则制定
+Route::post('rule/getRule','RuleController@getRule');
+// 编辑积分规则
+Route::post('rule/editRule','RuleController@editRule');
+// 获取推广金规则
+Route::post('rule/getTuiRuleAdmin','RuleController@getTuiRule');
+// 修改推广金
+Route::post('rule/editRuleAdmin','RuleController@editRuleAdmin');
+
+// 信息获取
+Route::post('msg/getTuiMoneyConvert','MsgController@getTuiMoneyConvert');
+Route::post('msg/mark','MsgController@mark');
 
 // 组
 Route::group(['middleware' => 'auth:api'], function(){
