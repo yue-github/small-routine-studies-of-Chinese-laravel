@@ -61,6 +61,7 @@ class AdminClassController extends Controller{
             }else{
                  
                  DB::table('class')->where(['id'=>request('id')])->update(['url'=>$path]);
+                 DB::table('class_pay')->where(['class_id'=>request('id')])->update(['url'=>$path]);
             }
 
            $id=$getId?$getId:request('id');
@@ -115,6 +116,7 @@ class AdminClassController extends Controller{
             }else{
                  
                  DB::table('class')->where(['id'=>request('id')])->update(['audio_src'=>$path]);
+                 DB::table('class_pay')->where(['class_id'=>request('id')])->update(['audio_src'=>$path]);
             }
            $id=$getId?$getId:request('id');
             return response()->json(['audio_src'=>$path,'id'=>$id,'title'=>request('title'),'re'=>$result,'reid'=>request('id')]); 
@@ -153,6 +155,11 @@ class AdminClassController extends Controller{
         }else{
             return response()->json(['status'=>503,'msg'=>'数据删除失败']);
         }
+    }
+    public function getSaleClassDetail(){
+        return DB::table('class_pay')
+        ->orderBy('id','desc')
+        ->get();
     }
  
          

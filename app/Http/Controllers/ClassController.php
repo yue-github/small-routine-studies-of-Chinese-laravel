@@ -13,6 +13,33 @@ class ClassController extends Controller{
          date_default_timezone_set('PRC');
     }
     public function getClass(){
+        // 垃圾数据清理
+        $clearSpace=json_decode(DB::table('class')->where(['price'=>null])->get(),true);
+        foreach ($clearSpace as $key => $value) {
+            if($value['url']){
+               $url=trim($value['url']); 
+               if($url){
+                    $url=substr($url, strlen(request('domain')));
+                    if(file_exists($url)!=''){
+                        unlink($url);
+                    } 
+                    
+                }
+            }
+            if($value['audio_src']){
+               $audio_src=trim($value['audio_src']); 
+               if($audio_src){
+                    $audio_src=substr($audio_src, strlen(request('domain')));
+                    if(file_exists($audio_src)!=''){
+                        unlink($audio_src);
+                    } 
+                    
+                }
+            }
+              
+                
+        }
+        DB::table('class')->where(['price'=>null])->delete();
         $result=DB::table('class')
         ->orderBy('id','asc')
         ->get();
@@ -21,6 +48,7 @@ class ClassController extends Controller{
     public function getClassPay(){
     	$result=DB::table('class_pay')
     	->where(['openid'=>request('openid')])
+        ->orderBy('pay_time','desc')
     	->get();
         return $result;
     }
@@ -43,8 +71,17 @@ class ClassController extends Controller{
         return DB::table('class')
         ->where(['class_try_read'=>1])
         ->orderBy('id', 'asc')
-        ->limit(8)
+        ->limit(12)
         ->get();
+    }
+    public function deleteClass(){
+        $result=DB::table('class_pay')->where(['id'=>request('id')])->delete();
+        if($result){
+            $data=DB::table('class_pay')->where(['openid'=>request('openid')])->get();
+            return response()->json(['status'=>200,'msg'=>'删除成功','data'=>$data]);
+        }else{
+             return response()->json(['status'=>503,'msg'=>'删除失败']);
+        }
     }
    
          

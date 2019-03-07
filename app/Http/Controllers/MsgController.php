@@ -27,8 +27,10 @@ class MsgController extends Controller{
     	return $result;
     }
     public function getTuiMoneyConvert(){
+
         return DB::table('tui_money_fund')->orderBy('is_success','asc')->get();
     }
+    
     public function mark(){
         $update=DB::table('tui_money_fund')->where(['id'=>request('id')])->update(['is_success'=>1]);
         if($update){
@@ -37,6 +39,31 @@ class MsgController extends Controller{
         }else{
             return repsonse()->json(['status'=>503,'msg'=>'标记已处理失败']);
         }
+    }
+    public function adminDelete(){
+        $result=DB::table('tui_money_fund')->where(['id'=>request('id')])->delete();
+
+        if($result){
+            $data=DB::table('tui_money_fund')->orderBy('is_success','asc')->get();
+            return response()->json(['status'=>200,'data'=>$data]);
+        }else{
+            return repsonse()->json(['status'=>503,'msg'=>'数据删除失败']);
+        }
+    }
+    public function deleteAll(Request $request){
+        $result=DB::table('tui_money_fund')->whereIn('id', $request->all())->delete();
+
+        if($result){
+            $data=DB::table('tui_money_fund')->orderBy('is_success','asc')->get();
+            return response()->json(['status'=>200,'data'=>$data]);
+        }else{
+            return repsonse()->json(['status'=>503,'msg'=>'数据删除失败']);
+        }
+    }
+    public function getUserMsg(){
+        return DB::table('users')
+        ->orderBy('id','asc')
+        ->get();
     }
          
 

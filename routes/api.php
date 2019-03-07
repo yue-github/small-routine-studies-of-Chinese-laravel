@@ -56,10 +56,16 @@ Route::post('class/getClassPay','ClassController@getClassPay');
 Route::post('class/addEye','ClassController@addEye');
 // 获取限制的课程
 Route::post('class/getClassLimit','ClassController@getClassLimit');
+// 删除课程
+Route::post('class/deleteClass','ClassController@deleteClass');
 
 // 信息模块
 Route::post('msg/getMsg','MsgController@getMsg');
+// 获取推广金信息
 Route::post('msg/getTuiMsg','MsgController@getTuiMsg');
+// 获取用户信息
+Route::post('msg/getUserMsg','MsgController@getUserMsg');
+
 
 // 支付功能】
 Route::post('pay/upload','PayController@upload');
@@ -77,12 +83,19 @@ Route::post('found/useFound','FoundController@useFound');
 // 规则制定
 Route::post('rule/getTuiRule','RuleController@getTuiRule');
 
-
-
-
+// 活动模块
+Route::post('activity/getMsg','activityController@getMsg');
+// 更新活动信息
+Route::post('activity/adminEditActivity','activityController@adminEditActivity');
+// 获取活动信息
+Route::post('activity/adminGetActivity','activityController@adminGetActivity');
+ 
  // 后台管理系统接口
 // 获取用户信息
 Route::get('user/info','AdminUserController@info');
+// 获取用户联系二维码信息
+Route::post('user/getConcactImg','AdminUserController@getConcactImg');
+
 // 登出
 Route::post('user/logout','AdminUserController@logout');
 // 轮播图信息获取
@@ -91,6 +104,9 @@ Route::post('banner/list','AdminBannerController@getList');
 Route::post('banner/imgUpload','AdminBannerController@saveImg');
 // 修改轮播图信息
 Route::post('banner/setList','AdminBannerController@setList');
+
+// 网站访问统计
+Route::post('visit/addVisit','VisitController@addVisit');
 
 // 课程图片接口请求
 Route::post('class/imgUpload','AdminClassController@imgUpload');
@@ -102,6 +118,10 @@ Route::post('class/edit','AdminClassController@edit');
 Route::post('class/addClass','AdminClassController@addClass');
 // 课程删除
 Route::post('class/delete','AdminClassController@delete');
+// 用户购买的课程获取
+Route::post('class/getSaleClassDetail','AdminClassController@getSaleClassDetail');
+
+
 
 // 规则制定
 Route::post('rule/getRule','RuleController@getRule');
@@ -114,7 +134,16 @@ Route::post('rule/editRuleAdmin','RuleController@editRuleAdmin');
 
 // 信息获取
 Route::post('msg/getTuiMoneyConvert','MsgController@getTuiMoneyConvert');
+// 标记处理
 Route::post('msg/mark','MsgController@mark');
+// 数据删除
+Route::post('msg/adminDelete','MsgController@adminDelete');
+// 选中数据删除
+Route::post('msg/deleteAll','MsgController@deleteAll');
+
+// 网站访问统计
+ 
+Route::post('visit/getVisit','VisitController@getVisit');
 
 // 组
 Route::group(['middleware' => 'auth:api'], function(){

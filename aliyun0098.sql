@@ -11,11 +11,30 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 05/03/2019 14:12:21
+ Date: 07/03/2019 13:33:05
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for activity
+-- ----------------------------
+DROP TABLE IF EXISTS `activity`;
+CREATE TABLE `activity`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `condition` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `time` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `place` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of activity
+-- ----------------------------
+INSERT INTO `activity` VALUES (1, '活动有奖品大礼', '本次活动将现场发放奖品', '通过进入小程序签到,积分点至少达到8', '2019-2-28', '广东省广州市天河区');
 
 -- ----------------------------
 -- Table structure for banner
@@ -23,20 +42,20 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `banner`;
 CREATE TABLE `banner`  (
   `id` int(11) NOT NULL,
-  `url` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `introduce` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL
-) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of banner
 -- ----------------------------
-INSERT INTO `banner` VALUES (1, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-03-5c7cf48f4275d.png', '第一张轮播图', '世界，晚安');
-INSERT INTO `banner` VALUES (2, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-12-5c7cf498aee4f.png', '第二张轮播图', '世界，你好');
-INSERT INTO `banner` VALUES (3, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-27-5c7cf4a712fae.jpg', '第三张轮播图', NULL);
-INSERT INTO `banner` VALUES (4, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-16-5c7cf49cd36f0.jpg', '第四张轮播图', NULL);
-INSERT INTO `banner` VALUES (5, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-40-5c7cf4b491904.jpg', '第五张轮播图', NULL);
-INSERT INTO `banner` VALUES (6, 'http://localhost/geomancy/public/uploads/2019-03-04-09-49-46-5c7cf4ba8e089.jpg', '第六张轮播图', NULL);
+INSERT INTO `banner` VALUES (1, 'http://localhost/geomancy/public/uploads/2019-03-06-02-38-37-5c7f32adb21df.png', '第一张轮播图', NULL);
+INSERT INTO `banner` VALUES (2, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-29-5c7f2b61f3cbf.png', '第二张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (3, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-38-5c7f2b6a53ba1.jpg', '第三张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (4, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-49-5c7f2b752cdf1.jpg', '第四张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (5, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-55-5c7f2b7b9b695.jpg', '第五张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (6, 'http://localhost/geomancy/public/uploads/2019-03-06-02-08-06-5c7f2b861dd1a.jpg', '第六张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
 
 -- ----------------------------
 -- Table structure for class
@@ -65,21 +84,18 @@ CREATE TABLE `class`  (
   `tui_found` int(11) NULL DEFAULT NULL,
   `eye` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 94 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of class
 -- ----------------------------
-INSERT INTO `class` VALUES (90, b'1', '推荐课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-47-59-5c7cf44f33c8f.jpg', '李老师', 0, '888.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-25-40-5c7cfd243e76b.mp3', 8, '0');
-INSERT INTO `class` VALUES (91, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-10-28-47-5c7cfddfdedd1.jpg', '郑老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-29-03-5c7cfdef326ec.mp3', 8, '0');
-INSERT INTO `class` VALUES (92, b'1', '线下课程', 'http://localhost/geomancy/public/uploads/2019-03-04-10-30-20-5c7cfe3cefbde.jpg', '霍老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'0', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-30-45-5c7cfe55d0eaf.mp3', 8, '0');
-INSERT INTO `class` VALUES (93, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-10-31-33-5c7cfe853f5a4.jpg', '孙老师', 0, '888.88', '命运与财富', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-31-42-5c7cfe8eb0072.mp3', 8, '0');
-INSERT INTO `class` VALUES (89, b'1', '线下课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-46-53-5c7cf40de8d44.jpg', '卢老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'0', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-25-24-5c7cfd147f239.mp3', 8, '0');
-INSERT INTO `class` VALUES (87, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-44-48-5c7cf3902da8d.jpg', '严老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-39-5c7cfce7b9e62.mp3', 8, '0');
-INSERT INTO `class` VALUES (88, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-45-28-5c7cf3b84bfaf.jpg', '吴老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-57-5c7cfcf9e5647.mp3', 8, '0');
-INSERT INTO `class` VALUES (73, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-34-27-5c7cf123756d7.jpg', '李老师', 0, '868.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 999, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-23-48-5c7cfcb488580.mp3', 8, '1');
-INSERT INTO `class` VALUES (86, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-38-00-5c7cf1f83e9bf.jpg', '魏老师', 0, '888.88', '风水国学', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-22-5c7cfcd6547e1.mp3', 8, '0');
-INSERT INTO `class` VALUES (75, b'1', '推荐课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-35-17-5c7cf1554ff1b.jpg', '蒲老师', 0, '886.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-04-10-24-04-5c7cfcc4d393a.mp3', 8, '0');
+INSERT INTO `class` VALUES (1, b'1', '线下课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-20-5c7f3f08be56a.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.23', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'0', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-02-10-22-5c7f2c0e355d1.mp3', 8, '0');
+INSERT INTO `class` VALUES (2, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-39-5c7f3f1bb2f65.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.36', 8, 88, b'0', 993, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-08-42-26-5c7f87f2d0771.mp3', 8, '17');
+INSERT INTO `class` VALUES (3, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-32-06-5c7f3f36b763f.jpg', '蒲老师', 0, '888.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 997, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-02-12-21-5c7f2c8591176.mp3', 8, '6');
+INSERT INTO `class` VALUES (12, b'1', '推荐课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-44-52-5c7f4234c3b4f.jpg', '张老师', 0, '888.88', '佛学静思', '信息', '热销中', '0.25', 8, 88, b'0', 999, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-03-45-06-5c7f42420bd47.mp3', 8, '1');
+INSERT INTO `class` VALUES (8, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-43-29-5c7f41e11e540.jpg', '魏老师', 0, '888.88', '励志控感', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-03-37-32-5c7f407cb7ab0.mp3', 8, '0');
+INSERT INTO `class` VALUES (11, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-41-09-5c7f4155b8a59.jpg', '卫老师', 0, '888.88', '逆境改命', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-03-41-36-5c7f41708790e.mp3', 8, '0');
+INSERT INTO `class` VALUES (13, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-45-35-5c7f425fa7dc8.jpg', '霍老师', 0, '888.88', '透彻说缘分', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-03-46-32-5c7f42985a44a.mp3', 8, '0');
 
 -- ----------------------------
 -- Table structure for class_pay
@@ -109,13 +125,16 @@ CREATE TABLE `class_pay`  (
   `tui_found` int(11) NULL DEFAULT NULL,
   `eye` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `class_id` int(11) NULL DEFAULT NULL,
+  `pay_time` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `username` varchar(150) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 121 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of class_pay
 -- ----------------------------
-INSERT INTO `class_pay` VALUES (120, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-04-09-34-27-5c7cf123756d7.jpg', '李老师', 0, '868.88', '风水国学', '信息', '热销中', '0.25', 8, 4, b'0', 1000, '你好，世界', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-04-10-23-48-5c7cfcb488580.mp3', 8, '1', 73);
+INSERT INTO `class_pay` VALUES (13, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-39-5c7f3f1bb2f65.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.36', 8, 507, b'0', 994, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-06-08-42-26-5c7f87f2d0771.mp3', 8, '16', 2, '2019-03-07 10:32:39', '蓝之静云');
+INSERT INTO `class_pay` VALUES (10, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-32-06-5c7f3f36b763f.jpg', '蒲老师', 0, '888.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 998, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-06-02-12-21-5c7f2c8591176.mp3', 8, '6', 3, '2019-03-06 17:41:29', '蓝之静云');
 
 -- ----------------------------
 -- Table structure for contact
@@ -130,12 +149,12 @@ CREATE TABLE `contact`  (
   `erweimaSrc` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `bank` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 19 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of contact
 -- ----------------------------
-INSERT INTO `contact` VALUES (18, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '123243243242342');
+INSERT INTO `contact` VALUES (1, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市', 'http://localhost/geomancy/public/uploads/2019-03-06-02-36-14-5c7f321e90115.jpg', '1312341242r4342r542r');
 
 -- ----------------------------
 -- Table structure for integral_rule
@@ -146,12 +165,12 @@ CREATE TABLE `integral_rule`  (
   `addPoint` int(11) NULL DEFAULT NULL,
   `role` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of integral_rule
 -- ----------------------------
-INSERT INTO `integral_rule` VALUES (1, 8, 'just');
+INSERT INTO `integral_rule` VALUES (1, 500, 'just');
 INSERT INTO `integral_rule` VALUES (2, 18, 'vip');
 
 -- ----------------------------
@@ -163,7 +182,7 @@ CREATE TABLE `migrations`  (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of migrations
@@ -185,12 +204,14 @@ CREATE TABLE `msg`  (
   `message` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `create_time` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 71 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of msg
 -- ----------------------------
-INSERT INTO `msg` VALUES (70, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-04 18:26:26');
+INSERT INTO `msg` VALUES (1, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-07 10:16:28');
+INSERT INTO `msg` VALUES (2, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-07 10:29:41');
+INSERT INTO `msg` VALUES (3, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-07 10:32:39');
 
 -- ----------------------------
 -- Table structure for oauth_access_tokens
@@ -208,7 +229,7 @@ CREATE TABLE `oauth_access_tokens`  (
   `expires_at` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `oauth_access_tokens_user_id_index`(`user_id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of oauth_access_tokens
@@ -389,6 +410,18 @@ INSERT INTO `oauth_access_tokens` VALUES ('93d30fd715ff52627f44587f7641c044c209c
 INSERT INTO `oauth_access_tokens` VALUES ('6e385a29c5b6a46b96f328e0b63e142b1262eabe50586352575983f27e97fe012c3d1a440c98d45f', 30, 1, 'MyApp', '[]', 0, '2019-03-05 00:20:39', '2019-03-05 00:20:39', '2020-03-05 00:20:39');
 INSERT INTO `oauth_access_tokens` VALUES ('e8406b0553cd8fbfdd7d5f0422e8245bc41730bcdcb4cb64d6ad9dd00eae14b2868ac88eb169714f', 30, 1, 'MyApp', '[]', 0, '2019-03-05 05:13:46', '2019-03-05 05:13:46', '2020-03-05 05:13:46');
 INSERT INTO `oauth_access_tokens` VALUES ('dcadd2fb53e9ce64a9eff66aef4c8a96ab8d4b5b5b430639cd2ae31664f37e9c44ae042db597f4e9', 30, 1, 'MyApp', '[]', 0, '2019-03-05 05:13:51', '2019-03-05 05:13:51', '2020-03-05 05:13:51');
+INSERT INTO `oauth_access_tokens` VALUES ('553eb2a398d7b14991b2716365c90ca4b7dd978dc8e893dfbb151cee044b884ee6d25999017a9afb', 30, 1, 'MyApp', '[]', 0, '2019-03-05 10:23:04', '2019-03-05 10:23:04', '2020-03-05 10:23:04');
+INSERT INTO `oauth_access_tokens` VALUES ('125a87bbbd7d97dd1efb4ca718e5dc115a3efbe6033f25ba12ec2b10168fbfb8563c5e48b8d6f323', 30, 1, 'MyApp', '[]', 0, '2019-03-05 11:10:03', '2019-03-05 11:10:03', '2020-03-05 11:10:03');
+INSERT INTO `oauth_access_tokens` VALUES ('2184d31a997a4eb879831f9afc96449aea20968782a197668a1a6578ca80fe1e1d60ae737f941cb4', 30, 1, 'MyApp', '[]', 0, '2019-03-06 00:29:11', '2019-03-06 00:29:11', '2020-03-06 00:29:11');
+INSERT INTO `oauth_access_tokens` VALUES ('85488417db8826ff1b4dff88a52690c6607591b5a76899f8b36b8086f18ad0da471ea30522fe393d', 32, 1, 'MyApp', '[]', 0, '2019-03-06 01:48:17', '2019-03-06 01:48:17', '2020-03-06 01:48:17');
+INSERT INTO `oauth_access_tokens` VALUES ('fe5db91a575a82a58b345a9f5d8e1b321238d292f2d4ece25f7344366c9301b1224a0503966f7e9d', 2, 1, 'MyApp', '[]', 0, '2019-03-06 01:51:03', '2019-03-06 01:51:03', '2020-03-06 01:51:03');
+INSERT INTO `oauth_access_tokens` VALUES ('3e2b8ab1f6360811c57bc5596da4fa1f370a4d1bf0057577c53f90b755ef373cd3bb3e5b261b29aa', 1, 1, 'MyApp', '[]', 0, '2019-03-06 02:02:07', '2019-03-06 02:02:07', '2020-03-06 02:02:07');
+INSERT INTO `oauth_access_tokens` VALUES ('27926bcc902c305328738869d4cd8c992222008679aceed14a8150dfdc2ec9c8976ce2d54256e868', 1, 1, 'MyApp', '[]', 0, '2019-03-06 02:05:28', '2019-03-06 02:05:28', '2020-03-06 02:05:28');
+INSERT INTO `oauth_access_tokens` VALUES ('ffa288bc3a146bd74a8836a8527f7a1ce97fb9f1c096187066cb1ee8a5796d5071d8467bd1c05b47', 1, 1, 'MyApp', '[]', 0, '2019-03-06 04:21:19', '2019-03-06 04:21:19', '2020-03-06 04:21:19');
+INSERT INTO `oauth_access_tokens` VALUES ('fad819fcf7726fcccb1b0830a078385bb8b948b8eac3b8cc0492fff25b52bffde2f77f7866cc7d2f', 1, 1, 'MyApp', '[]', 0, '2019-03-06 04:36:20', '2019-03-06 04:36:20', '2020-03-06 04:36:20');
+INSERT INTO `oauth_access_tokens` VALUES ('db023346ac1d8045eac5de98be4bb1ece9f43475494f0afb24208fb07e30d5a8bbe9370b791d4db5', 1, 1, 'MyApp', '[]', 0, '2019-03-06 08:07:23', '2019-03-06 08:07:23', '2020-03-06 08:07:23');
+INSERT INTO `oauth_access_tokens` VALUES ('f6aaed33474ead2cb236b5fb299d765787e62bf1b598998eef72f06bb3bda3df90e526d4b2fcefec', 1, 1, 'MyApp', '[]', 0, '2019-03-06 08:11:31', '2019-03-06 08:11:31', '2020-03-06 08:11:31');
+INSERT INTO `oauth_access_tokens` VALUES ('e8d424a40b42fc4c0edb4d395e9eea6f0474c553f81251a67c92e0c4daff6cefe0af4d2ec583becc', 1, 1, 'MyApp', '[]', 0, '2019-03-07 00:59:18', '2019-03-07 00:59:18', '2020-03-07 00:59:18');
 
 -- ----------------------------
 -- Table structure for oauth_auth_codes
@@ -402,7 +435,7 @@ CREATE TABLE `oauth_auth_codes`  (
   `revoked` tinyint(1) NOT NULL,
   `expires_at` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for oauth_clients
@@ -421,7 +454,7 @@ CREATE TABLE `oauth_clients`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `oauth_clients_user_id_index`(`user_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of oauth_clients
@@ -440,7 +473,7 @@ CREATE TABLE `oauth_personal_access_clients`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `oauth_personal_access_clients_client_id_index`(`client_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Fixed;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Fixed;
 
 -- ----------------------------
 -- Records of oauth_personal_access_clients
@@ -458,7 +491,7 @@ CREATE TABLE `oauth_refresh_tokens`  (
   `expires_at` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `oauth_refresh_tokens_access_token_id_index`(`access_token_id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for test
@@ -506,14 +539,12 @@ CREATE TABLE `tui_money_fund`  (
   `money` int(11) NULL DEFAULT NULL,
   `is_success` bit(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tui_money_fund
 -- ----------------------------
-INSERT INTO `tui_money_fund` VALUES (5, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '2019-02-28 17:50:08', 10, b'0', '3.75', 8, 3, b'1');
-INSERT INTO `tui_money_fund` VALUES (6, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '卢老师', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '2019-02-28 18:00:11', 10, b'0', '3.75', 8, 3, b'1');
-INSERT INTO `tui_money_fund` VALUES (7, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蒲老师', '18814137320', '广州市天河区车陂', 'http://localhost/geomancy/public/uploads/2019-03-05-03-19-42-5c7deacea89fe.jpg', '2019-02-28 18:04:56', 10, b'0', '3.75', 8, 3, b'0');
+INSERT INTO `tui_money_fund` VALUES (1, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市', 'http://localhost/geomancy/public/uploads/2019-03-06-02-35-13-5c7f31e119d80.jpg', '2019-03-06 10:35:50', 50, b'0', '16.67', 6, 2, b'1');
 
 -- ----------------------------
 -- Table structure for tui_rule
@@ -525,12 +556,12 @@ CREATE TABLE `tui_rule`  (
   `money` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `type` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tui_rule
 -- ----------------------------
-INSERT INTO `tui_rule` VALUES (1, 6, '3', 'tui');
+INSERT INTO `tui_rule` VALUES (1, 6, '2.5', 'tui');
 
 -- ----------------------------
 -- Table structure for tuiguang_msg
@@ -545,12 +576,7 @@ CREATE TABLE `tuiguang_msg`  (
   `get_found` int(11) NULL DEFAULT NULL,
   `create_time` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 26 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of tuiguang_msg
--- ----------------------------
-INSERT INTO `tuiguang_msg` VALUES (25, '课程购买', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '蓝之静云', '风水国学', 8, '2019-03-04 18:26:26');
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for users
@@ -566,7 +592,7 @@ CREATE TABLE `users`  (
   `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
-  `nickName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `nickName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `city` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `province` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `points` int(11) NULL DEFAULT NULL,
@@ -579,27 +605,28 @@ CREATE TABLE `users`  (
   `found_mark_that` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `role` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (26, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-02-28 17:04:50', NULL, '蓝之静云', 'Sanming', 'Fujian', 12, '2019-03-05 11:12:26', 8, 2, NULL, 20, '123', '123', 'just');
-INSERT INTO `users` VALUES (30, NULL, NULL, 'gdmzd', NULL, '$2y$10$69Lirb9VgHvKZeG0snCcnuED3mehrodWn8Jux0N2XrdD7.CGhE8RC', NULL, '2019-02-28 15:04:28', '2019-02-28 15:04:28', NULL, NULL, NULL, NULL, NULL, 8, NULL, NULL, NULL, NULL, NULL, 'just');
+INSERT INTO `users` VALUES (1, NULL, NULL, 'gdmzd', NULL, '$2y$10$bBRNXQ0qRd/mAymKrIdmWeP4XhvPzxnUgSI8YO7b5k1Xp7O5sc8R2', NULL, '2019-03-06 08:07:22', '2019-03-06 08:07:22', '明正道', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` VALUES (2, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-03-06 16:08:12', NULL, '蓝之静云', 'Sanming', 'Fujian', 457, '2019-03-07 09:57:33', 500, 3, NULL, 1000, NULL, NULL, 'just');
 
 -- ----------------------------
 -- Table structure for web_visit
 -- ----------------------------
 DROP TABLE IF EXISTS `web_visit`;
 CREATE TABLE `web_visit`  (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `count` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of web_visit
 -- ----------------------------
-INSERT INTO `web_visit` VALUES (1, '0');
+INSERT INTO `web_visit` VALUES (1, '159', 'enter');
 
 SET FOREIGN_KEY_CHECKS = 1;

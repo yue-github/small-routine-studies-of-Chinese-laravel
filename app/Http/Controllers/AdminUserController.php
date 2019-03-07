@@ -27,6 +27,10 @@ class AdminUserController extends Controller{
     public function logout(){
     	return response()->json(['code'=>20000,'data'=>'success']);
     }
+    public function getConcactImg(){
+        return DB::table('contact')->where(['openid'=>request('openid')])->get(['erweimaSrc']);
+       
+    }
  
          
 

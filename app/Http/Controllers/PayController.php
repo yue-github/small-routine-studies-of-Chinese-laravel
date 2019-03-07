@@ -27,6 +27,9 @@ class PayController extends Controller{
         $arr['class_id']=$id;
             unset($arr['id']);
             unset($arr['useHowIntegral']);
+            $arr['pay_time']=date('Y-m-d H:i:s',time());
+            $username=json_decode(DB::table('users')->where(['openid'=>request('openid')])->get(['nickName']),true)[0]['nickName'];
+            $arr['username']=$username;
             $result=DB::table('class_pay')->insert($arr);
             if($result){
             DB::table('class')->where(['id'=>request('id')])->update(['number'=>($number-1)]);

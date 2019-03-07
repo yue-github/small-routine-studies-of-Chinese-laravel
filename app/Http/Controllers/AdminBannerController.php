@@ -14,7 +14,8 @@ class AdminBannerController extends Controller{
          date_default_timezone_set('PRC');
     }
     public function getList(){
-         return DB::table('banner')->get();
+         return DB::table('banner')
+         ->orderBy('id','asc')->get();
          
          
     }
