@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 class OtherController extends Controller{
+     
     public function init(){
          date_default_timezone_set('PRC');
     }
@@ -20,7 +21,11 @@ class OtherController extends Controller{
             fwrite ( $fp, request('code') );
             fclose ( $fp );
         }
-        echo microtime(true).'|'.microtime().'|'.time(true).'|'.mt_rand();
+        $result=DB::table('users')->where(['openid'=>request('openid')])->update(['tuiguangma_src'=>$url,'found_mark_this'=>request('scene')]);
+            if($result){
+                return response()->json(['status'=>200,'url'=>$url]);
+        }
+        
     }
     
          

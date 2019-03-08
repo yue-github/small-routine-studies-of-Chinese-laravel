@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+// 支付
+use EasyWeChat\Factory;
+use App\Repositories\WxPayRepository;
+use function EasyWeChat\Kernel\Support\generate_sign;
+
 // use Illuminate\Http\Response;
 class PayController extends Controller{
     public function init(){
@@ -71,6 +76,40 @@ class PayController extends Controller{
              
                 return response()->json(['status'=>200,'msg'=>'原子弹导入成功']);
             }
+    }
+    public function wxpay(){
+        $payment = \EasyWeChat::payment(); // 微信支付
+
+        $result = $payment->order->unify([
+            'body'         => request('title'),
+            'out_trade_no' => microtime(true).mt_rand().'',
+            'trade_type'   => 'JSAPI',  // 必须为JSAPI
+            'openid'       => request('openid'), // 这里的openid为付款人的openid
+            'total_fee'    => request('price'), // 总价
+        ]);
+
+        // 如果成功生成统一下单的订单，那么进行二次签名
+        if ($result['return_code'] === 'SUCCESS') {
+            // 二次签名的参数必须与下面相同
+            $params = [
+                'appId'     => 'wxcdcea82c094087d6',
+                'timeStamp' => time().'',
+                'nonceStr'  => $result['nonce_str'],
+                'package'   => 'prepay_id=' . $result['prepay_id'],
+                'signType'  => 'MD5',
+            ];
+
+            // config('wechat.payment.default.key')为商户的key
+            $params['paySign'] = generate_sign($params, config('wechat.payment.default.key'));
+
+            return json_encode($params);
+        } else {
+            return json_encode($result);
+        }
+
+
+
+
     }
          
 

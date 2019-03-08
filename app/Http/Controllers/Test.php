@@ -17,7 +17,10 @@ class Test extends Controller
     public function test(){
       $this->init();
       DB::table('test')->insert(['date'=>date('Y-m-d H:i:s',time()),'name'=>request('name')]);
-      echo "yes you are right";
+      $pay=[
+        'name'=>'wutongyue'
+      ]
+      
        // $this->delete();
        // $this->insert();
        // $this->select();

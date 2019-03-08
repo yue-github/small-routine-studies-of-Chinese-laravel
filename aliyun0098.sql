@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 07/03/2019 13:33:05
+ Date: 08/03/2019 18:50:26
 */
 
 SET NAMES utf8mb4;
@@ -50,12 +50,33 @@ CREATE TABLE `banner`  (
 -- ----------------------------
 -- Records of banner
 -- ----------------------------
-INSERT INTO `banner` VALUES (1, 'http://localhost/geomancy/public/uploads/2019-03-06-02-38-37-5c7f32adb21df.png', '第一张轮播图', NULL);
-INSERT INTO `banner` VALUES (2, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-29-5c7f2b61f3cbf.png', '第二张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
-INSERT INTO `banner` VALUES (3, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-38-5c7f2b6a53ba1.jpg', '第三张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
-INSERT INTO `banner` VALUES (4, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-49-5c7f2b752cdf1.jpg', '第四张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
-INSERT INTO `banner` VALUES (5, 'http://localhost/geomancy/public/uploads/2019-03-06-02-07-55-5c7f2b7b9b695.jpg', '第五张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
-INSERT INTO `banner` VALUES (6, 'http://localhost/geomancy/public/uploads/2019-03-06-02-08-06-5c7f2b861dd1a.jpg', '第六张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (1, 'http://localhost/geomancy/public/uploads/2019-03-07-10-30-39-5c80f2cfbbf40.png', '第一张轮播图', '你好，世界');
+INSERT INTO `banner` VALUES (2, 'http://localhost/geomancy/public/uploads/2019-03-07-10-24-40-5c80f1686f7ec.png', '第二张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (3, 'http://localhost/geomancy/public/uploads/2019-03-07-10-24-44-5c80f16cdffcd.jpg', '第三张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (4, 'http://localhost/geomancy/public/uploads/2019-03-07-10-24-51-5c80f173b4c83.jpg', '第四张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (5, 'http://localhost/geomancy/public/uploads/2019-03-07-10-25-00-5c80f17ca0ba9.jpg', '第五张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner` VALUES (6, 'http://localhost/geomancy/public/uploads/2019-03-07-11-24-41-5c80ff799008c.jpg', '第六张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+
+-- ----------------------------
+-- Table structure for banner_shop
+-- ----------------------------
+DROP TABLE IF EXISTS `banner_shop`;
+CREATE TABLE `banner_shop`  (
+  `id` int(11) NOT NULL,
+  `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `introduce` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of banner_shop
+-- ----------------------------
+INSERT INTO `banner_shop` VALUES (1, 'http://localhost/geomancy/public/uploads/2019-03-07-11-25-12-5c80ff98f23bf.jpg', '第一张轮播图', '你好，世界');
+INSERT INTO `banner_shop` VALUES (2, 'http://localhost/geomancy/public/uploads/2019-03-07-11-27-58-5c81003e62fe5.jpg', '第二张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner_shop` VALUES (3, 'http://localhost/geomancy/public/uploads/2019-03-07-11-33-11-5c810177abdc3.jpg', '第三张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner_shop` VALUES (4, 'http://localhost/geomancy/public/uploads/2019-03-07-11-32-40-5c810158bb978.jpg', '第四张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner_shop` VALUES (5, 'http://localhost/geomancy/public/uploads/2019-03-07-11-28-08-5c810048837e8.jpg', '第五张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
+INSERT INTO `banner_shop` VALUES (6, 'http://localhost/geomancy/public/uploads/2019-03-07-11-48-45-5c81051d5b50a.jpg', '第六张轮播图', '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！');
 
 -- ----------------------------
 -- Table structure for class
@@ -90,7 +111,7 @@ CREATE TABLE `class`  (
 -- Records of class
 -- ----------------------------
 INSERT INTO `class` VALUES (1, b'1', '线下课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-20-5c7f3f08be56a.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.23', 8, 88, b'0', 1000, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'0', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-02-10-22-5c7f2c0e355d1.mp3', 8, '0');
-INSERT INTO `class` VALUES (2, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-39-5c7f3f1bb2f65.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.36', 8, 88, b'0', 993, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-08-42-26-5c7f87f2d0771.mp3', 8, '17');
+INSERT INTO `class` VALUES (2, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-39-5c7f3f1bb2f65.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.36', 8, 88, b'0', 992, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-08-42-26-5c7f87f2d0771.mp3', 8, '20');
 INSERT INTO `class` VALUES (3, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-32-06-5c7f3f36b763f.jpg', '蒲老师', 0, '888.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 997, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-02-12-21-5c7f2c8591176.mp3', 8, '6');
 INSERT INTO `class` VALUES (12, b'1', '推荐课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-44-52-5c7f4234c3b4f.jpg', '张老师', 0, '888.88', '佛学静思', '信息', '热销中', '0.25', 8, 88, b'0', 999, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-03-45-06-5c7f42420bd47.mp3', 8, '1');
 INSERT INTO `class` VALUES (8, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-43-29-5c7f41e11e540.jpg', '魏老师', 0, '888.88', '励志控感', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'0', 'http://localhost/geomancy/public/audio/2019-03-06-03-37-32-5c7f407cb7ab0.mp3', 8, '0');
@@ -128,12 +149,12 @@ CREATE TABLE `class_pay`  (
   `pay_time` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `username` varchar(150) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of class_pay
 -- ----------------------------
-INSERT INTO `class_pay` VALUES (13, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-39-5c7f3f1bb2f65.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.36', 8, 507, b'0', 994, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-06-08-42-26-5c7f87f2d0771.mp3', 8, '16', 2, '2019-03-07 10:32:39', '蓝之静云');
+INSERT INTO `class_pay` VALUES (13, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-31-39-5c7f3f1bb2f65.jpg', '李老师', 0, '888.88', '风水国学', '信息', '热销中', '0.36', 8, 507, b'0', 994, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-06-08-42-26-5c7f87f2d0771.mp3', 8, '20', 2, '2019-03-07 10:32:39', '蓝之静云');
 INSERT INTO `class_pay` VALUES (10, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-06-03-32-06-5c7f3f36b763f.jpg', '蒲老师', 0, '888.88', '姻缘红尘', '信息', '热销中', '0.25', 8, 88, b'0', 998, '人人都有向好之心，人人都有主吉之愿，所以人们相信风水，当然风水作为几千年的文明传承，更值得人们相信！有人说，好的风水是福人居福地，让所有的好能量磁场为我所用；有人说，好的风水是居龙脉、住吉宅，无煞无灾无阻碍；有人说，好的风水是藏风聚气，风生水起，助力自己平安健康、事事顺利、财源广进。这些观点都对，但并不全面。课程认为，你自己才是最好的风水！人才是主宰世界的主人，没有人，再好的风水也失去了用武之地；没有人，风水二字就是去了文化内涵和实际意义，只剩下流动的风和婉转的水。古人云，心生万法，道法自然。自然界的一切都是为人所用的。如果这个人没有向好之心、主吉之愿，没有良好的德行，没有担大任的鸿鹄之志和创业精神……再好的风水也白瞎！', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-06-02-12-21-5c7f2c8591176.mp3', 8, '6', 3, '2019-03-06 17:41:29', '蓝之静云');
 
 -- ----------------------------
@@ -204,7 +225,7 @@ CREATE TABLE `msg`  (
   `message` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `create_time` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of msg
@@ -212,6 +233,9 @@ CREATE TABLE `msg`  (
 INSERT INTO `msg` VALUES (1, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-07 10:16:28');
 INSERT INTO `msg` VALUES (2, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-07 10:29:41');
 INSERT INTO `msg` VALUES (3, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-07 10:32:39');
+INSERT INTO `msg` VALUES (4, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你获得风水国学课程。请点击【我的】查看', '2019-03-08 09:05:13');
+INSERT INTO `msg` VALUES (5, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你兑换了推广金10点,你将获得人民币4.17元,请耐心等待', '2019-03-08 13:00:28');
+INSERT INTO `msg` VALUES (6, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', b'1', '恭喜你兑换了推广金10点,你将获得人民币4.17元,请耐心等待', '2019-03-08 18:32:49');
 
 -- ----------------------------
 -- Table structure for oauth_access_tokens
@@ -422,6 +446,9 @@ INSERT INTO `oauth_access_tokens` VALUES ('fad819fcf7726fcccb1b0830a078385bb8b94
 INSERT INTO `oauth_access_tokens` VALUES ('db023346ac1d8045eac5de98be4bb1ece9f43475494f0afb24208fb07e30d5a8bbe9370b791d4db5', 1, 1, 'MyApp', '[]', 0, '2019-03-06 08:07:23', '2019-03-06 08:07:23', '2020-03-06 08:07:23');
 INSERT INTO `oauth_access_tokens` VALUES ('f6aaed33474ead2cb236b5fb299d765787e62bf1b598998eef72f06bb3bda3df90e526d4b2fcefec', 1, 1, 'MyApp', '[]', 0, '2019-03-06 08:11:31', '2019-03-06 08:11:31', '2020-03-06 08:11:31');
 INSERT INTO `oauth_access_tokens` VALUES ('e8d424a40b42fc4c0edb4d395e9eea6f0474c553f81251a67c92e0c4daff6cefe0af4d2ec583becc', 1, 1, 'MyApp', '[]', 0, '2019-03-07 00:59:18', '2019-03-07 00:59:18', '2020-03-07 00:59:18');
+INSERT INTO `oauth_access_tokens` VALUES ('dc5a28689a5796ef788897e7acc1cac9d7dc650909efe210f3e7b9d8292029a7a81c5aa5f4d3e31a', 1, 1, 'MyApp', '[]', 0, '2019-03-08 04:15:04', '2019-03-08 04:15:04', '2020-03-08 04:15:04');
+INSERT INTO `oauth_access_tokens` VALUES ('796b82607804662fb7f985c4e8e02d7049f915215b3aa04cebb487054dd3dd3e2065b2c6cbd21986', 1, 1, 'MyApp', '[]', 0, '2019-03-08 05:37:34', '2019-03-08 05:37:34', '2020-03-08 05:37:34');
+INSERT INTO `oauth_access_tokens` VALUES ('1c75dbb65db40d42080ee1110dc3024b7ca1ab5fd083b31b7a0073566607454bf9afbeab2fb63b04', 1, 1, 'MyApp', '[]', 0, '2019-03-08 05:47:46', '2019-03-08 05:47:46', '2020-03-08 05:47:46');
 
 -- ----------------------------
 -- Table structure for oauth_auth_codes
@@ -494,33 +521,6 @@ CREATE TABLE `oauth_refresh_tokens`  (
 ) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for test
--- ----------------------------
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE `test`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Table structure for test1
--- ----------------------------
-DROP TABLE IF EXISTS `test1`;
-CREATE TABLE `test1`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `date` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of test1
--- ----------------------------
-INSERT INTO `test1` VALUES (1, 'wutongyue', '2019-2-23 8:33:33');
-
--- ----------------------------
 -- Table structure for tui_money_fund
 -- ----------------------------
 DROP TABLE IF EXISTS `tui_money_fund`;
@@ -539,12 +539,14 @@ CREATE TABLE `tui_money_fund`  (
   `money` int(11) NULL DEFAULT NULL,
   `is_success` bit(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tui_money_fund
 -- ----------------------------
 INSERT INTO `tui_money_fund` VALUES (1, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市', 'http://localhost/geomancy/public/uploads/2019-03-06-02-35-13-5c7f31e119d80.jpg', '2019-03-06 10:35:50', 50, b'0', '16.67', 6, 2, b'1');
+INSERT INTO `tui_money_fund` VALUES (2, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市', 'http://localhost/geomancy/public/uploads/2019-03-06-02-36-14-5c7f321e90115.jpg', '2019-03-08 13:00:28', 10, b'0', '4.17', 6, 3, b'1');
+INSERT INTO `tui_money_fund` VALUES (3, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市', 'http://localhost/geomancy/public/uploads/2019-03-06-02-36-14-5c7f321e90115.jpg', '2019-03-08 18:32:49', 10, b'0', '4.17', 6, 3, b'0');
 
 -- ----------------------------
 -- Table structure for tui_rule
@@ -611,7 +613,7 @@ CREATE TABLE `users`  (
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES (1, NULL, NULL, 'gdmzd', NULL, '$2y$10$bBRNXQ0qRd/mAymKrIdmWeP4XhvPzxnUgSI8YO7b5k1Xp7O5sc8R2', NULL, '2019-03-06 08:07:22', '2019-03-06 08:07:22', '明正道', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` VALUES (2, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-03-06 16:08:12', NULL, '蓝之静云', 'Sanming', 'Fujian', 457, '2019-03-07 09:57:33', 500, 3, NULL, 1000, NULL, NULL, 'just');
+INSERT INTO `users` VALUES (2, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-03-06 16:08:12', NULL, '蓝之静云', 'Sanming', 'Fujian', 957, '2019-03-08 17:32:43', 500, 4, NULL, 980, NULL, '', 'just');
 
 -- ----------------------------
 -- Table structure for web_visit
@@ -627,6 +629,6 @@ CREATE TABLE `web_visit`  (
 -- ----------------------------
 -- Records of web_visit
 -- ----------------------------
-INSERT INTO `web_visit` VALUES (1, '159', 'enter');
+INSERT INTO `web_visit` VALUES (1, '399', 'enter');
 
 SET FOREIGN_KEY_CHECKS = 1;

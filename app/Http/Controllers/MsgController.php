@@ -65,6 +65,21 @@ class MsgController extends Controller{
         ->orderBy('id','asc')
         ->get();
     }
+    public function shopSearch(){
+        $search=request('msg');
+            $matchMsg=json_decode(DB::table('class')->get(['id','title','whoColumn']),true);
+            $arr=array();
+            foreach ($matchMsg as $key => $value) {
+                $match=$value['title'].$value['whoColumn'];
+                 $result=strstr($match,$search);
+                 if($result){
+                    $arr[]=$value['id'];
+                 }
+            }
+           
+          
+            return DB::table('class')->whereIn('id',$arr)->get();
+    }
          
 
 

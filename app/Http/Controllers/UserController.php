@@ -109,6 +109,15 @@ class UserController extends Controller{
             return response()->json(['status'=>200,'msg'=>'此openid有相关联系方式记录']);
         }
     }
+    public function setTuiGuangMa(){
+        if(request('src')!=''){
+            $result=DB::table('users')->where(['openid'=>request('openid')])->update(['tuiguangma_src'=>request('src')]);
+            if($result){
+                return 'success';
+            }
+        }
+        
+    }
          
 
 

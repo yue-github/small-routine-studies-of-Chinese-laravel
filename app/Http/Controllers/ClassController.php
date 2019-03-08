@@ -68,11 +68,18 @@ class ClassController extends Controller{
         }
     }
     public function getClassLimit(){
-        return DB::table('class')
+        if(request('scene')!=0){
+            $scene=json_decode(DB::table('users')->where(['openid'=>request('openid')])->get(['found_mark_that']),true)[0]['found_mark_that'];
+            if(!$scene){
+                DB::table('users')->where(['openid'=>request('openid')])->update(['found_mark_that'=>request('scene')]);
+            }
+        }
+        $data=DB::table('class')
         ->where(['class_try_read'=>1])
         ->orderBy('id', 'asc')
         ->limit(12)
         ->get();
+        return response()->json(['status'=>200,'data'=>$data]);
     }
     public function deleteClass(){
         $result=DB::table('class_pay')->where(['id'=>request('id')])->delete();

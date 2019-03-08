@@ -37,6 +37,8 @@ Route::post('user/goContact','UserController@goContact');
 Route::post('user/getContact','UserController@getContact');
 // 验证用户联系方式是否存在
 Route::post('user/proveContact','UserController@proveContact');
+// 插入推广码
+Route::post('user/setTuiGuangMa','UserController@setTuiGuangMa');
 
 
 // 用户签到
@@ -65,10 +67,14 @@ Route::post('msg/getMsg','MsgController@getMsg');
 Route::post('msg/getTuiMsg','MsgController@getTuiMsg');
 // 获取用户信息
 Route::post('msg/getUserMsg','MsgController@getUserMsg');
-
+// 商城搜索功能
+Route::post('msg/shopSearch','MsgController@shopSearch');
+ 
 
 // 支付功能】
 Route::post('pay/upload','PayController@upload');
+// 微信支付
+Route::post('pay/wxpay','PayController@wxpay');
 
 
 // 图片上传
@@ -90,6 +96,14 @@ Route::post('activity/adminEditActivity','activityController@adminEditActivity')
 // 获取活动信息
 Route::post('activity/adminGetActivity','activityController@adminGetActivity');
  
+// 轮播图信息获取
+Route::post('bannerShop/list','BannerController@getList');
+// 将修改的轮播图图片储存起来
+Route::post('bannerShop/imgUpload','BannerController@saveImg');
+// 修改轮播图信息
+Route::post('bannerShop/setList','BannerController@setList');
+
+
  // 后台管理系统接口
 // 获取用户信息
 Route::get('user/info','AdminUserController@info');
@@ -98,6 +112,7 @@ Route::post('user/getConcactImg','AdminUserController@getConcactImg');
 
 // 登出
 Route::post('user/logout','AdminUserController@logout');
+
 // 轮播图信息获取
 Route::post('banner/list','AdminBannerController@getList');
 // 将修改的轮播图图片储存起来
