@@ -39,9 +39,19 @@ class ClassController extends Controller{
               
                 
         }
+       
         DB::table('class')->where(['price'=>null])->delete();
         $result=DB::table('class')
         ->orderBy('id','asc')
+        ->get();
+        return $result;
+    }
+    public function getSearchClass(){
+        $take=request('take')?request('take'):10;
+        $skip=request('skip')?request('skip'):0;
+        $result=DB::table('class')
+        ->skip($skip*$take)
+        ->take($take)
         ->get();
         return $result;
     }

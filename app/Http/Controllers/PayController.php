@@ -30,11 +30,15 @@ class PayController extends Controller{
         $id=request('id');
         $useHowIntegral=request('useHowIntegral');
         $arr['class_id']=$id;
-            unset($arr['id']);
             unset($arr['useHowIntegral']);
+             $arr['howPeople']=intval($arr['howPeople'])+1;
+             DB::table('class')->where(['id'=>request('id')])->update(['howPeople'=>$arr['howPeople']]);
+            unset($arr['id']);
             $arr['pay_time']=date('Y-m-d H:i:s',time());
             $username=json_decode(DB::table('users')->where(['openid'=>request('openid')])->get(['nickName']),true)[0]['nickName'];
             $arr['username']=$username;
+           
+            // 将用户购买的课程插入到表中
             $result=DB::table('class_pay')->insert($arr);
             if($result){
             DB::table('class')->where(['id'=>request('id')])->update(['number'=>($number-1)]);

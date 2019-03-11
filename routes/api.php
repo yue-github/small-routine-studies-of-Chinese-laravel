@@ -60,6 +60,10 @@ Route::post('class/addEye','ClassController@addEye');
 Route::post('class/getClassLimit','ClassController@getClassLimit');
 // 删除课程
 Route::post('class/deleteClass','ClassController@deleteClass');
+// 搜索模块获取课程
+Route::post('class/getSearchClass','ClassController@getSearchClass');
+
+
 
 // 信息模块
 Route::post('msg/getMsg','MsgController@getMsg');

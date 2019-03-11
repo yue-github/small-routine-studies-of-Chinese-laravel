@@ -28,7 +28,7 @@ class EnableCrossRequestMiddleware
 
             'http://gdmzd.com',
             'http://www.gdmzd.com',
-            
+            'http://localhost:9529'
              
             // 'http://localhost:8090'
         ];
