@@ -118,6 +118,9 @@ class UserController extends Controller{
         }
         
     }
+    public function getCompanyContact(){
+        return DB::table('contact_us')->get();
+    }
          
 
 

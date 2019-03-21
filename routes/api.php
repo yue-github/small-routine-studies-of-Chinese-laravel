@@ -39,6 +39,19 @@ Route::post('user/getContact','UserController@getContact');
 Route::post('user/proveContact','UserController@proveContact');
 // 插入推广码
 Route::post('user/setTuiGuangMa','UserController@setTuiGuangMa');
+// 获取公司联系方式
+Route::post('nose/getCompanyContact','UserController@getCompanyContact');
+
+
+// 获取公司简介
+Route::post('nose/getComIntroduce','CompanyController@getComIntroduce');
+// 获取公司简介图片
+Route::post('nose/getComIntrImg','CompanyController@getComIntrImg');
+// 获取更多公司信息
+Route::post('nose/getMoreComData','CompanyController@getMoreComData');
+
+
+
 
 
 // 用户签到
@@ -114,6 +127,8 @@ Route::get('user/info','AdminUserController@info');
 // 获取用户联系二维码信息
 Route::post('user/getConcactImg','AdminUserController@getConcactImg');
 
+
+ 
 // 登出
 Route::post('user/logout','AdminUserController@logout');
 

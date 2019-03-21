@@ -31,6 +31,7 @@ class AdminUserController extends Controller{
         return DB::table('contact')->where(['openid'=>request('openid')])->get(['erweimaSrc']);
        
     }
+    
  
          
 

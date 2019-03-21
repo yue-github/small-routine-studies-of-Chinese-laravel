@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 11/03/2019 17:04:44
+ Date: 21/03/2019 16:53:24
 */
 
 SET NAMES utf8mb4;
@@ -163,6 +163,41 @@ INSERT INTO `class_pay` VALUES (17, b'1', '推荐课程', 'http://localhost/geom
 INSERT INTO `class_pay` VALUES (18, b'1', '精品课程', 'http://localhost/geomancy/public/uploads/2019-03-09-09-29-29-5c838779b0315.jpg', '魏老师', 1, '888.88', '风水定乾坤', '信息', '热销中', '0.25', 8, 88, b'0', 1000, '你好，世界', b'1', b'1', 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', 'http://localhost/geomancy/public/audio/2019-03-09-09-29-40-5c838784e22c5.mp3', 8, '0', 19, '2019-03-11 16:40:08', '蓝之静云');
 
 -- ----------------------------
+-- Table structure for com_in_img
+-- ----------------------------
+DROP TABLE IF EXISTS `com_in_img`;
+CREATE TABLE `com_in_img`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '公司简介',
+  `img1` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `img2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of com_in_img
+-- ----------------------------
+INSERT INTO `com_in_img` VALUES (1, 'https://miao.su/images/2019/02/18/rong1d86b.md.jpg', 'https://www.miao.su/images/2019/03/11/ceoba6bf.png');
+
+-- ----------------------------
+-- Table structure for company_introduce
+-- ----------------------------
+DROP TABLE IF EXISTS `company_introduce`;
+CREATE TABLE `company_introduce`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of company_introduce
+-- ----------------------------
+INSERT INTO `company_introduce` VALUES (1, '一、明正道大学堂简介', '广州明正道文化发展有限公司是一家以推广国学文化为主的教育机构，是一个互生大平台。明正道大学堂是明正道旗下的易学教育品牌。明正道大学堂主打《名定终身》、《名管天下》、《易经智慧》等易学系列课程，以打造一套工具帮助更加多有缘人为宗旨。一命二运三风水，四积功德五读书。六名七相八敬神，九交贵人十养生，十一择业与择偶，十二趋吉要避凶');
+INSERT INTO `company_introduce` VALUES (2, '二、课程简介', '1、《名定终身》课程（區洛锜导师主讲）:围绕人生6大财富展开，通过如何测算姓名以及姓名的数理含义分析一个人一生的运程趋势，能够做到不见其人了解其性格，相当于把这个人真实地呈现在姓名分析者的眼前。更能通过三才搭配，卦象分析得出婚姻、事业、学业、财富、健康等信息，看出运势的趋势，应该要避免什么才能令婚姻和谐、守住财富、开拓事业、健康平安。达到阴阳调和，五行平衡的状态，才是人生最好的状态。一个人的姓名蕴藏着不可思议的能量，姓名体现了人的命运，它所产生的磁场能够影响着人的行为和运势。从姓名我们能够看出一个人的性格，以及一个人的健康状况，家庭婚姻，事业和财运。名字从使用后就开始对人产生影响，所以我们要从源头抓起，从新生儿时期就要给孩子取一个寓意吉祥的好名字，赐子千金，不如赐子一艺；赐子一艺，不如赐子好名。2、《名管天下》课程介绍（區洛锜导师主讲）: 姓名改变命运  如何用名管天下？要管人，先懂名！ 管好人，得天下！在现代管理中，人力资源部可以迅速根据姓名的评估，测算聘用的人是否适合该岗位，或者根据评估进行岗位调整。 在人际交往中则能迅速了解到名主的性格，便于沟通。择偶与选择合作伙伴家族发展的人才布局企业发展的人才布局。调整命格不足，规避未来风险。企业管理中：便于企业主及高管对团队成员的知人善用、发挥其最大的长板价值。最容易上手的人力资源使用工具');
+INSERT INTO `company_introduce` VALUES (3, '三、师资力量', '主讲导师：易学导师、姓名学实战专家區洛锜老师，十年磨一剑，让无数人找到自己的方向，改变命运！让多少家庭从破碎到幸福，让多少公司业绩翻倍！區洛锜导师，明正道大学堂创始人，易学导师，江西万寿宫传度弟子，师承原道教协会副会长张继禹学习道教文化；华夏文化研究院实战专家。师承香港国学姓名学大师麦俊轩研习姓名学，近十年姓名能量学、紫薇斗数、易学文化研究经验，是目前国内唯一普及教育国学文化”“姓名学”的女导师。潜心进行十年易学、姓名能量学研究后，呼吁将原来只服务于名望贵族的姓名学在社会推广，成就更多大众。曾服务于广东电台、广东省电视台媒体人为其改名助运，现协助国家著名易学名家为国内政界人士取字改运。其十年磨一剑，总结提炼出《名管天下》等系列课程，只需运用0-9的10个数字就可以将每个人的运程、性格、健康、感情、事业全囊括其中，其课程以准、狠、灵为过往学员所推崇。而且实用好学易上手。區洛锜导师的使命：弘扬国学文化，让每个人都有一个好名字好家庭！已为上千人、企业、家族提供家庭、婚姻、事业财富调整、家庭成员起名改名、企业布局、人才调整、家族族谱修订，并挽救多个家庭婚姻，辅导培训几百位姓名学人才，深受企业和各界人士好评。');
+INSERT INTO `company_introduce` VALUES (4, '荣誉', '2016年中华传统文化丙申.宁波论坛  执行主席。2017年9月第六届全球周易专家高峰论坛授予《传统文化培训导师》、《华夏金牌易学大师》。2017年11月中华传统文化普陀山论坛  荣誉主席。2018年1月19日获得中国讲师认证中心颁发的中国讲师信誉认证证书。2018年7月21日中华民族文化高峰论坛组委会授予《国学讲师》。2018年7月26日获得中华民族文化高峰论坛组委会授予《中华金牌风水大师》资格证书。2018年8月16日被江西龙虎山群仙会聘为,长老院长;老海峡两岸文化交流协会,广州分会筹办人;海峡两岸易学风水交流中心副主任');
+
+-- ----------------------------
 -- Table structure for contact
 -- ----------------------------
 DROP TABLE IF EXISTS `contact`;
@@ -180,7 +215,25 @@ CREATE TABLE `contact`  (
 -- ----------------------------
 -- Records of contact
 -- ----------------------------
-INSERT INTO `contact` VALUES (2, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市天河区', 'http://localhost/geomancy/public/uploads/2019-03-09-09-43-30-5c838ac246847.jpg', '35200013213153123');
+INSERT INTO `contact` VALUES (2, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', '吴同岳', '18814137320', '广东省广州市天河区', 'http://localhost/geomancy/public/uploads/2019-03-09-09-43-30-5c838ac246847.jpg', NULL);
+
+-- ----------------------------
+-- Table structure for contact_us
+-- ----------------------------
+DROP TABLE IF EXISTS `contact_us`;
+CREATE TABLE `contact_us`  (
+  `id` int(11) NOT NULL,
+  `phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `qq` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of contact_us
+-- ----------------------------
+INSERT INTO `contact_us` VALUES (1, '13926463131', '275972481', '275972481@qq.com', '广州市黄埔区双岗黄岗大街富鸿里6号');
 
 -- ----------------------------
 -- Table structure for integral_rule
@@ -218,6 +271,27 @@ INSERT INTO `migrations` VALUES (2, '2016_06_01_000002_create_oauth_access_token
 INSERT INTO `migrations` VALUES (3, '2016_06_01_000003_create_oauth_refresh_tokens_table', 1);
 INSERT INTO `migrations` VALUES (4, '2016_06_01_000004_create_oauth_clients_table', 1);
 INSERT INTO `migrations` VALUES (5, '2016_06_01_000005_create_oauth_personal_access_clients_table', 1);
+
+-- ----------------------------
+-- Table structure for more_company_data
+-- ----------------------------
+DROP TABLE IF EXISTS `more_company_data`;
+CREATE TABLE `more_company_data`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `src` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `srcShow` bit(1) NULL DEFAULT NULL,
+  `img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of more_company_data
+-- ----------------------------
+INSERT INTO `more_company_data` VALUES (1, '區洛锜老师接受中央电视台采访网页', 'https://v.qq.com/x/page/r073025cbcf.html', b'1', 'https://miao.su/images/2019/02/18/img1d1c76.md.jpg');
+INSERT INTO `more_company_data` VALUES (2, '易学泰斗张志哲教授和易学泰斗邵伟华大师参加明正道大学堂开业仪式', NULL, NULL, 'https://miao.su/images/2019/02/18/img2882bf.md.jpg');
+INSERT INTO `more_company_data` VALUES (3, '广东电视台主持人和杨公风水传承人杨院长参加明正道开业仪式', NULL, NULL, 'https://miao.su/images/2019/02/18/img49528e.md.jpg');
+INSERT INTO `more_company_data` VALUES (4, '明正道大学堂區洛锜导师被江西龙虎山群仙会聘为百位道家长老之一', NULL, NULL, 'https://miao.su/images/2019/02/18/img3e3701.md.jpg');
 
 -- ----------------------------
 -- Table structure for msg
@@ -457,6 +531,12 @@ INSERT INTO `oauth_access_tokens` VALUES ('18350470fe5905097376ecefffcebb6fdd09f
 INSERT INTO `oauth_access_tokens` VALUES ('08745708c24474b2fffe1378bfbd3c0d481e4214d06447cd54102ff1afe65969f06aa660906183cc', 1, 1, 'MyApp', '[]', 0, '2019-03-09 07:37:37', '2019-03-09 07:37:37', '2020-03-09 07:37:37');
 INSERT INTO `oauth_access_tokens` VALUES ('ce317e19790c68f218781828d8fb5a1116d9ce030d405d8090d9f770f59830ac0190771fde420c02', 1, 1, 'MyApp', '[]', 0, '2019-03-09 09:21:02', '2019-03-09 09:21:02', '2020-03-09 09:21:02');
 INSERT INTO `oauth_access_tokens` VALUES ('e5a8d43ce1da10713755bf286b0ae8007751f496711f5a1a9165746b3ea3261576b01803083f6484', 1, 1, 'MyApp', '[]', 0, '2019-03-11 07:59:04', '2019-03-11 07:59:04', '2020-03-11 07:59:04');
+INSERT INTO `oauth_access_tokens` VALUES ('d689265c09a5f55b3d9840a80f17abe5c0ce4867e37a50f64558a225417fc7a15aef604b77cf8222', 1, 1, 'MyApp', '[]', 0, '2019-03-19 03:17:14', '2019-03-19 03:17:14', '2020-03-19 03:17:14');
+INSERT INTO `oauth_access_tokens` VALUES ('8e131183b2c7949b89bb26243ac5599e906caecc5986880d503f34ef0aeb4b619992d78e0da08283', 1, 1, 'MyApp', '[]', 0, '2019-03-19 05:01:10', '2019-03-19 05:01:10', '2020-03-19 05:01:10');
+INSERT INTO `oauth_access_tokens` VALUES ('6655195c60c1e031cfa5fa8b0383bbe973fe45cc186fc04979b5ea5d03a6faccc9847c6fa1089617', 1, 1, 'MyApp', '[]', 0, '2019-03-19 05:26:52', '2019-03-19 05:26:52', '2020-03-19 05:26:52');
+INSERT INTO `oauth_access_tokens` VALUES ('0eeac5fd9a91d10b93bddcd6dcfe95aca2d2446fb322ec9ac3ba0d6cfed646ab78f2eeac63a8fc5c', 1, 1, 'MyApp', '[]', 0, '2019-03-19 05:28:16', '2019-03-19 05:28:16', '2020-03-19 05:28:16');
+INSERT INTO `oauth_access_tokens` VALUES ('befdc24206f46c3eda39fdfc09dba89bbfdbfb2dcf70db08e50b03b42ae4a63922da2676382c43af', 1, 1, 'MyApp', '[]', 0, '2019-03-19 05:34:25', '2019-03-19 05:34:25', '2020-03-19 05:34:25');
+INSERT INTO `oauth_access_tokens` VALUES ('d71d24fec47a1ad4fb4ee6fc35ea04f98ce0e26b2dfe1f09171972636acafa848db31c812bb011c0', 1, 1, 'MyApp', '[]', 0, '2019-03-19 10:03:24', '2019-03-19 10:03:24', '2020-03-19 10:03:24');
 
 -- ----------------------------
 -- Table structure for oauth_auth_codes
@@ -619,7 +699,7 @@ CREATE TABLE `users`  (
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES (1, NULL, NULL, 'gdmzd', NULL, '$2y$10$bBRNXQ0qRd/mAymKrIdmWeP4XhvPzxnUgSI8YO7b5k1Xp7O5sc8R2', NULL, '2019-03-06 08:07:22', '2019-03-06 08:07:22', '明正道', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` VALUES (2, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-03-06 16:08:12', NULL, '蓝之静云', 'Sanming', 'Fujian', 1957, '2019-03-11 08:46:47', 8, 6, NULL, 940, NULL, '', 'just');
+INSERT INTO `users` VALUES (2, NULL, 'ojDzy5HY2GrOgez8w0DKPoSNzFRU', NULL, NULL, NULL, NULL, '2019-03-06 16:08:12', NULL, '蓝之静云', 'Sanming', 'Fujian', 1965, '2019-03-18 09:01:36', 8, 7, NULL, 940, NULL, '', 'just');
 
 -- ----------------------------
 -- Table structure for web_visit
@@ -635,6 +715,6 @@ CREATE TABLE `web_visit`  (
 -- ----------------------------
 -- Records of web_visit
 -- ----------------------------
-INSERT INTO `web_visit` VALUES (1, '131', 'enter');
+INSERT INTO `web_visit` VALUES (1, '170', 'enter');
 
 SET FOREIGN_KEY_CHECKS = 1;
