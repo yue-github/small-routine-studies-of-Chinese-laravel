@@ -28,7 +28,8 @@ class Test extends Controller
         return $result;
     }
     public function gdmzdTest(){
-      echo request('name');
+          return DB::table('banner')
+         ->orderBy('id','asc')->get();
     }
     
     

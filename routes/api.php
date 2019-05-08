@@ -22,7 +22,8 @@ Route::any('test','Test@test');
 Route::any('testEnter','Test@testEnter');
 Route::any('gdmzdTest','Test@gdmzdTest');
 Route::any('testGet','Test@testGet');
-
+Route::post('getTask', 'TestController@getTask'); 
+Route::post('getName', 'TestController@getName');
 
 
 // 获取用户信息
